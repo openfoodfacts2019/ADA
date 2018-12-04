@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script type="text/javascript" src="js/d3.min.js"></script>
     <script>
@@ -21,101 +22,45 @@
     })()
     </script>
 	 
-  <style>
-	footer {
-      padding-top: 70px;
-      padding-bottom: 70px;
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-	  text-align: center;
-	  
-	}
-  
-	.reveal_left {
-		width: 90%;
-		}
 
-	.reveal_right {
-		width: 90%;
-		}
-
-	.reveal_left_alternate {
-		width: 90%;
-		background-color:whitesmoke;
-		}
-
-	.reveal_right_alternate {
-		width: 90%;
-		background-color:whitesmoke;
-		}
-
-
-		
-		
-		
-		/* Style the tab */
-.tab {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: 30%;
-    height: 300px;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-    display: block;
-    background-color: inherit;
-    color: black;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 70%;
-    border-left: none;
-    height: 300px;
-    display: none;
-}
-
-		</style>
-  
-
-
+  	<link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
+	<link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
+	<link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
 
 </head>
 <body>
 
-<div class="jumbotron text-center">
-  <h1>Eeat less sugar, you're sweet enough already</h1>
-  <p>cs_team_beta_hw2</p> 
-  <p style="font-size:9px;color:gray">Automn 2018</p>
-  <p></p>
-  <p>
-	<a href="https://world.openfoodfacts.org/data" target="_blank">
-	<img width="178" height="150" id="logo" style="margin-bottom:0.5rem" alt="Open Food Facts" src="https://static.openfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png" srcset="https://static.openfoodfacts.org/images/misc/openfoodfacts-logo-en-356x300.png 2x">
-	</a>
-  </p>
+
+<!------------------------------------------------------------------------>  
+<!-- Header																-->
+<!------------------------------------------------------------------------>  
+<div class="header">
+	<h1>Eeat less sugar,<br>you're sweet enough already</h1>
+	<p>cs_team_beta_hw2</p> 
+	<p style="font-size:9px;color:gray">Automn 2018</p>
+	<p>
+		<a href="https://world.openfoodfacts.org/data" target="_blank">
+			<img width="178" height="150" id="logo" style="margin-bottom:0.5rem" alt="Open Food Facts" src="https://static.openfoodfacts.org/images/misc/openfoodfacts-logo-en-178x150.png" srcset="https://static.openfoodfacts.org/images/misc/openfoodfacts-logo-en-356x300.png 2x"/>
+		</a>		
+	</p>
 </div>
+
+
+<!------------------------------------------------------------------------>  
+<!-- MENU 																-->
+<!------------------------------------------------------------------------>  
+<div class="topnav">  
+  <a href="#">Data Game</a>
+  <a href="#">Data Analysis</a>
+  <a href="#">Data Cleaning</a>  
+  <a href="#">Data Exploration</a>    
+  <a href="#">Home</a>    
+</div>
+
   
+<!------------------------------------------------------------------------>  
+<!-- Top Text  															-->
+<!------------------------------------------------------------------------>    
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -125,23 +70,30 @@
 
 		Based on the "AHA Scientific Statement" (<a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627">*Ref2</a>), the major sources of added sugars are mainly coming form those Food Categories: regular soft drinks, sugars, candy, cakes, cookies, pies and fruit drinks, dairy desserts and milk products:
 
-		<table style="border:1px solid;"><tr style="border:1px solid;background-color:whitesmoke;">
-		<td><b>Food categories</b></td><td><b>Contribution to added sugar intake</b><br>
-		(% of total added sugar consumed)</td></tr>
-		<tr><td>Regular soft drinks</td><td>33.0</td></tr>
-		<tr><td>Sugars and candy</td><td>16.1</td></tr>
-		<tr><td>Cakes, cookies, pies</td><td>12.9</td></tr>
-		<tr><td>Fruit drinks (fruitades and fruit punch)</td><td>9.7</td></tr>
-		<tr><td>Dairy desserts and milk products (ice cream sweetened yogurt, and sweetened milk)</td><td>8.6</td></tr>
-		<tr><td>Other grains (cinnamon toast and honey-nut waffles)</td><td>5.8</td></tr>
-		</table>
-
+		<div id="boxshadow">
+			<table style="border:0px solid;"><tr style="border:0px solid;background-color:whitesmoke;">
+			<td><b>Food categories</b></td><td><b>Contribution to added sugar intake</b><br>
+			(% of total added sugar consumed)</td></tr>
+			<tr><td>Regular soft drinks</td><td>33.0</td></tr>
+			<tr><td>Sugars and candy</td><td>16.1</td></tr>
+			<tr><td>Cakes, cookies, pies</td><td>12.9</td></tr>
+			<tr><td>Fruit drinks (fruitades and fruit punch)</td><td>9.7</td></tr>
+			<tr><td>Dairy desserts and milk products (ice cream sweetened yogurt, and sweetened milk)</td><td>8.6</td></tr>
+			<tr><td>Other grains (cinnamon toast and honey-nut waffles)</td><td>5.8</td></tr>
+			</table>
+		</div>
 
 	</p>
 	
 		<p>
 		From there, it's easy understandable that eating too much sugar is not healthy and can cause Weight Gain, increase the risk of Hear Disease, Diabetes (<a href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/added-sugars">*Ref3</a>) or even Cancer, ...
-		</p><p>
+		</p>
+		
+		
+		
+		
+		
+		<p>
 		Therefore, it's crucial to limit the consumption of foods with high amounts of added sugars. According to the American Heart Association (AHA) (<a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627">*Ref4</a>), the maximum amount of added sugars per day are limited to:
 		</p><p>
 		<ul><li>
@@ -291,26 +243,28 @@
 		<h2> Understanding the Data: Overall information about Contributors </h2>
 	</div>
 
-	<div id="paragraph1_content" style="background-color:whitesmoke;border-bottom-width:10px">	
+	<div id="boxshadow" style="background-color:whitesmoke;border-bottom-width:10px" >	
 		<div class="container reveal_left">
 			<br/>
 			<p align="right">
 				Top 10 Creators
 				<br>
-				<img class="picture" src="./images/ImageTopCreator.JPG" style="width:800px;border:1px solid #434343"/>	
+				<div id="boxshadow">
+					<img  src="./images/ImageTopCreator.JPG" class="picture"/>	
+				</div>
 			</p>
 
 			<br/>
 		</div>
 		
-		<div class="container reveal_right" style="color:gray;">
-			<p alig="lef">
+		<div class="container reveal_right">
+			<p align="left">
 					So far we can see that <b>Kiliweb</b> is the most active contributors and is continously adding products. <b>usda-ndb-import</b>, which is the 'United States Department of Agriculture' seems to not contrinbute anymore to the open food facts database and has been only imported once. The open community of openfoodfacts-contributors seems to be growing day after day. We could almost consider individual contributor as marginal.
 			</p>
 			
-			<p align="lef">
-				<img class="picture" src="./images/ImageCreatedTime.JPG" style="width:900px;border:1px solid #434343"/>			
-			</p>
+			<div id="boxshadow">
+				<img class="picture" src="./images/ImageCreatedTime.JPG"  style="border:None;width:800px" />					
+			</div>
 			
 			<br/>
 			<p>
@@ -333,28 +287,30 @@
 		<h2> Understanding the Data: Overall information about Brands </h2>
 	</div>
 
-	<div id="paragraph1_content" style="background-color:whitesmoke;border-bottom-width:10px">	
+	<div id="boxshadow" style="background-color:whitesmoke;border-bottom-width:10px">	
 		<div class="container reveal_left">
 			<br/>
 			<p align="right">
 				Top 10 Brands
 				<br/>
-				<img class="picture" src="./images/ImageTopBrands.JPG" style="width:800px;border:1px solid #434343"/>					
+				<div id="boxshadow">
+					<img  src="./images/ImageTopBrands.JPG"  style="border:None;width:800px" />					
+				</div
 				
 			</p>
 			<br/>
 		</div>
 		
-		<div class="container reveal_right" style="color:gray;">
+		<div class="container reveal_right">
 			<p>
 				<b>32% of the products</b> are not assigned to any Brands. Furthermore the 6 most big brands of Open Food Facts are French Mall. This sounds strange that main of the products are repertoried in France.
 			</p>
 			<p>
 				<table><tr>
 					<td>
-						<img class="picture" src="./images/Fromage.RefletsDeFrance.jpg" style="width:300px;border:0px"/>	
+						<img src="./images/Fromage.RefletsDeFrance.jpg"  style="border:None;width:400px" />					
 					</td>
-					<td width="20px">&nbsp;</td>
+					<td width="20px"></td>
 					<td>
 							French cheese only could not explain this delta ?
 							<br><br>
@@ -389,19 +345,21 @@
 		<h2> Understanding the Data: Overall information about Countries </h2>
 	</div>
 
-	<div id="paragraph1_content" style="background-color:whitesmoke;border-bottom-width:10px">	
+	<div id="boxshadow" style="background-color:whitesmoke;border-bottom-width:10px">	
 		<div class="container reveal_left">
 			<br/>
 			<p align="right">
 				Top 10 Largest Countries
 				<br>
-				<img class="picture" src="./images/ImageTopCountries.JPG" style="width:800px;border:1px solid #434343"/>					
+				<div id="boxshadow">
+					<img src="./images/ImageTopCountries.JPG" style="border:None;width:800px" />					
+				</div>
 				
 			</p>
 			<br/>
 		</div>
 		
-		<div class="container reveal_right" style="color:gray;">
+		<div class="container reveal_right">
 			<p>
 				We discover here the same behavior than previous analyis. Most of the products are assigned to France which was the expectation as the main contributor is kiliweb (France Web Agency). This is consistent, especially after the analysis of the contributors and brands above.
 			</p>
@@ -443,23 +401,25 @@
 <!-- Paragraph4																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
 <div class="row">
-	<div id="paragraph3_title" class="container reveal_top" style="color:#434343">
+	<div id="paragraph4_title" class="container reveal_top" style="color:#434343">
 		<h2> Understanding the Data: Overall information about Categories </h2>
 	</div>
 
-	<div id="paragraph1_content" style="background-color:whitesmoke;border-bottom-width:10px">	
+	<div id="boxshadow" style="background-color:whitesmoke;border-bottom-width:10px">	
 		<div class="container reveal_left">
 			<br/>
 			<p align="right">
 				Top 10 Largest Categories
 				<br>
-				<img class="picture" src="./images/ImageTopCategory.JPG" style="width:800px;border:1px solid #434343"/>					
+				<div id="boxshadow">
+					<img src="./images/ImageTopCategory.JPG" style="width:800px;border:none;"/>					
+				</div>
 				
 			</p>
 			<br/>
 		</div>
 		
-		<div class="container reveal_right" style="color:gray;">
+		<div class="container reveal_right">
 			<p>
 				It seems that <b>74% of the Products</b> does not have any 'category'. Furthermore the first and second categories contain both 'Beverages'.
 			</p>
@@ -476,15 +436,16 @@
 
 
 <!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph x																									-->
+<!-- Paragraph 5																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
-<div>
-	<div id="paragraph5_title" class="container reveal_top">
+<div class="row">
+	<div id="paragraph5_title" class="container reveal_top" style="color:#434343">
 		<h2> Enrich the Data: Product Category </h2>
 	</div>
 
-	<div id="paragraph5_content"  style="background-color:#9EC1D5;border-bottom-width:10px">	
+	<div id="boxshadow"  style="background-color:#9EC1D5;border-bottom-width:10px">	
 		<div class="container reveal_left">
+			<br/>
 			<p align="right">
 				Cate<br>				
 			</p>	
@@ -508,17 +469,19 @@
 <!-- Paragraph x																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
 
-<div>
-	<div id="paragraph5_title" class="container reveal_top">
+<div class="row">
+	<div id="paragraph6_title" class="container reveal_top" style="color:#434343">
 		<h2> Enrich the Data: Brands & Companies </h2>
 	</div>
 
-	<div id="paragraph5_content"  style="background-color:#9EC1D5;border-bottom-width:10px">	
+	<div id="boxshadow"  style="background-color:#9EC1D5;border-bottom-width:10px">	
 		<div class="container reveal_left">
 			<br>
 			<p align="right">
 				All Brands per Company<br>				
-				<img class="picture" src="./images/AllBrands.jpg" style="width:800px;border:1px solid #434343"/>			
+				<div id="boxshadow">
+					<img src="./images/AllBrands.jpg"  style="border:None;width:800px" />					
+				</div>
 			</p>	
 			<p>
 				Furthermore, we tried to regroup Brands logically, as main of them are owned by the same Company. So we decided to enrich the data with Company And Brands by following informations from the schema above:
@@ -549,21 +512,21 @@
 
 
 <!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph4																									-->
+<!-- Paragraph 7																								-->
 <!-------------------------------------------------------------------------------------------------------------------->
 <div class="row">
-	<div id="paragraph3_title" class="container reveal_top" style="color:#434343">
+	<div id="paragraph7_title" class="container reveal_top" style="color:#434343">
 		<h2> Play with the Data</h2>
 	</div>
 
-	<div id="paragraph1_content" style="background-color:whitesmoke;border-bottom-width:10px">	
+	<div id="boxshadow" style="background-color:whitesmoke;border-bottom-width:10px">	
 		<div class="container reveal_left">
 			<p align="right">
 			<br/>
 			Play with Data in Tableau
-				<p style="border:1px solid black">
-				<div class='tableauPlaceholder' id='viz1543788752039' style='border:1px solid black'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cl&#47;Classeur1_921&#47;Tableaudebord1&#47;1_rss.png' style='border: solid 1px black' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Classeur1_921&#47;Tableaudebord1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cl&#47;Classeur1_921&#47;Tableaudebord1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1543788752039');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='1050px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-				</p>
+				<div id="boxshadow">
+				<div class='tableauPlaceholder' id='viz1543788752039' style='border:none'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cl&#47;Classeur1_921&#47;Tableaudebord1&#47;1_rss.png' style='border: solid 1px black' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Classeur1_921&#47;Tableaudebord1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cl&#47;Classeur1_921&#47;Tableaudebord1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1543788752039');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='420px';vizElement.style.maxWidth='1050px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+				</div>
 			</p>
 			<br/>
 		</div>
@@ -577,15 +540,16 @@
 	</div>
 </div>
 
-<br/><br/>
 
-<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
 <br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
 
 <!-------------------------------------------------------------------------------------------------------------------->	  
 <!-- FOOTER		 																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
+
 <footer>
 	<p>steve.rey@epfl.ch</p>
 	<p>yauheni.samasionak@epfl.ch</p>
@@ -606,28 +570,5 @@
 </script>
 
 
-<script>
-function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
-	
 </body>
 </html>

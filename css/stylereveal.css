@@ -1,0 +1,21 @@
+.reveal_left {
+	width: 90%;
+	}
+
+.reveal_right {
+	width: 90%;
+	color:gray;
+	}
+
+.reveal_left_alternate {
+	width: 90%;
+	font-size:8px;
+	color:black;
+	font-family:italic;
+	background-color:whitesmoke;
+	}
+
+.reveal_right_alternate {
+	width: 90%;
+	background-color:whitesmoke;
+	}
