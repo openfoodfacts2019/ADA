@@ -1,5 +1,6 @@
 .reveal_left {
 	width: 90%;
+	color:gray;
 	}
 
 .reveal_right {
@@ -19,3 +20,7 @@
 	width: 90%;
 	background-color:whitesmoke;
 	}
+
+.reveal_top{
+	color:#434343;
+}

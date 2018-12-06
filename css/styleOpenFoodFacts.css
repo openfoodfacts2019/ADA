@@ -6,6 +6,7 @@ footer {
   text-align: center;  
 }
 
+
 .picture800 {
     width: 800px;
 	border: None;
@@ -91,4 +92,17 @@ body {
 .topnav a:hover {
     background-color: #ddd;
     color: black;	
+}
+
+
+
+.topselected{
+	background-color:greenyellow; 
+	color: black; 
+	border:2px;
+}
+
+.selected{
+	color: black; 
+	font-style:bold;
 }

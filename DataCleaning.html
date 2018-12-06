@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>cs_team_beta_hw2: Open Food Facts</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	  
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
+  	<link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
+  	<link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
+
+	<script src="./jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+    <script src="./js/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="./js/d3.min.js"></script>
+	<script>
+		(function() {
+			var config = {
+				viewFactor: 0.08,
+				duration: 800,
+				reset: true,
+			}
+			window.sr = new ScrollReveal(config)
+		})()
+		</script>
+</head>
+<body>
+
+
+<!------------------------------------------------------------------------>  
+<!-- Header																-->
+<!------------------------------------------------------------------------>  
+<div class="header">
+	<h1>Eeat less sugar,<br>you're sweet enough already</h1>
+	<p style="font-size:9px;color:gray">cs_team_beta_hw2 - Automn 2018</p>
+	<p>
+		<a href="https://world.openfoodfacts.org/data" target="_blank">
+			<img alt="Open Food Facts" src="./images/openfoodfacts-logo-en-178x150.png" srcset="./images/openfoodfacts-logo-en-178x150.png" width="150px"/>
+		</a>		
+	</p>
+</div>
+
+
+<!------------------------------------------------------------------------>  
+<!-- MENU 																-->
+<!------------------------------------------------------------------------>  
+<div class="topnav" style="vertical-align: middle;" > 
+		<table align="center"><tr>
+			<td><a href="./index.html">Home</a></td>
+			<td><a href="./DataExploration.html">Data Exploration</a></td>
+			<td><a href="./DataCleaning.html" class="topselected"><div class="selected">Data Cleaning</div></a></td>
+			<td><a href="./DataAnalysis.html">Data Analysis</a></td>
+			<td><a href="./DataGame.html">Data Game</a></td>
+	</tr></table>
+</div>
+	
+
+  
+<!------------------------------------------------------------------------>  
+<!-- Top Text  															-->
+<!------------------------------------------------------------------------>    
+<div class="container">
+
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Paragraph1 																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+<div class="row">
+	<div id="paragraph1_title">
+		<h3>#Data Cleaning</h3>
+	</div>
+
+	<div >	
+asdfasfd adsf
+	</div>
+</div>
+
+<br><br><br>
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Paragraph x																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+
+<div class="row">
+	<div id="paragraph6_title" class="container reveal_top">
+		<h3>Enrich the Data: Brands & Companies </h3>
+	</div>
+
+	<div id="boxshadow" style="background-color:whitesmoke;">	
+		<div class="container reveal_left">
+			<br>
+			<p align="right">
+				<b>All Brands per Company</b><br>				
+				<div id="boxshadow">
+					<img src="./images/AllBrands.jpg" />					
+				</div>
+			</p>	
+			<p>
+				Furthermore, we tried to regroup Brands logically, as main of them are owned by the same Company. So we decided to enrich the data with Company And Brands by following informations from the schema above:
+			</p>
+		</div>
+		
+		<div class="container reveal_right">
+			<p>
+				To get those infromation, we implemented, with beautiful soup an interface to Wikipedia:
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Nestlé_brands">https://en.wikipedia.org/wiki/Category:Nestlé_brands</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands">https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands">https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/List_of_Unilever_brands">https://en.wikipedia.org/wiki/List_of_Unilever_brands</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Mars_brands">https://en.wikipedia.org/wiki/Category:Mars_brands</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands">https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo">https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Coca-Cola_brands">https://en.wikipedia.org/wiki/Category:Coca-Cola_brands</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands">https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands">https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands</a></li>
+				</ul>
+			</p>
+		<br><br>
+		</div>	
+	</div>
+</div>
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- End Navigation																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+	<div>    
+		<table width="100%">
+			<tr>
+				<td align="left">
+					<a href="./DataExploration.html" style="font-size: 30px;color:black;vertical-align:right "><img src="./images/moveBack.png" width="40px"></img>Move back to Data Exploration</a>
+				</td>
+				<td align="right">
+					<a href="./DataAnalysis.html" style="font-size: 30px;color:black;vertical-align:right ">Move next to Data Analysis<img src="./images/moveNext.png" width="40px"></img></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<br><br>
+
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- FOOTER		 																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+
+<footer>
+	<p>steve.rey@epfl.ch</p>
+	<p>yauheni.samasionak@epfl.ch</p>
+	<p>victor.wiklund@epfl.ch</p> 
+</footer>
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Script																											-->
+<!-------------------------------------------------------------------------------------------------------------------->
+<script>
+    // JavaScript
+    window.sr = ScrollReveal();
+    sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
+    sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
+    sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
+</script>
+
+
+</body>
+</html>
