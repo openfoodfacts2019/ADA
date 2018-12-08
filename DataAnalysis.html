@@ -176,7 +176,6 @@
             <div class="row">
                 <div id="paragraph2_title" class="container reveal_top">
                     <h3>Sugar, fat and salt</h3>
-                    <h4> We all know that too much sugar is bad, much like we all know the dangers of too much fat and salt. The question we ask ourselves here is... do bad things come in threes?</h4>
                 </div>
 
                 <div id="boxshadow" style="background-color:whitesmoke;">	
@@ -236,7 +235,8 @@
                         </div>
                         <p align="left">
                         <br></br>
-                        Nice. what we see now is how sugar, fat and salt correlates in the products. Visually it seems that most products contain zero of all three quantities, that more sugar tends to imply more salt, 
+                        Nice. what we see now is how sugar, fat and salt correlates in the products. Visually it seems that most products contain zero of all three quantities, maybe that more sugar tend to imply less salt... but honestly, it's still difficult to tell.
+                        To amend that we'll start of with trying to use the Pearson coefficent to see how well the relationships in the plots can be described by a simple line.
                         </p>
                     </div>
 
@@ -250,8 +250,10 @@
                         </div>
                         <p align="left">
                         <br></br>
-                        Nice. what we see now is how sugar, fat and salt correlates in the products. Visually it seems that most products contain zero of all three quantities, that more sugar tends to imply more salt, 
-                        </p>
+                        In this first attempt at measuring the correlation we used the data for all products, and the results point to there being absolutely no relationship (indicated by values close to zero). 
+                        </p><p>
+                        However, the Pearson coefficent takes outliers too strongly into account, so much like we did when we plotted the density we remove the ten percent of the data that tended to extremes.
+                        </p><p>
                     </div>
 
  
@@ -264,24 +266,31 @@
                         </div>
                         <p align="left">
                         <br></br>
-                        Nice. what we see now is how sugar, fat and salt correlates in the products. Visually it seems that most products contain zero of all three quantities, that more sugar tends to imply more salt, 
+                        In this second matrix some trends do appear, though they are very weak. Sugar and salt is weakly negatively correlated, with an increase in one coming at the decrease of another. Meanwhile sugar and fat, fat and salt exhibit a weak positive relationship.
+
+                        With Pearson we got values for the linear relationship between the attributes, but who is to say it has to be strictly linear?
+                        For the sake of completedness we also decided to use test the Spearman coefficient to see whether or not the relationship could be described by a monotonic function
                         </p>
                     </div>
 
  
                     <div class="container reveal_left">
                         <p align="right">
-                        <b>Spearman Coefficient without outliers<b>
+                        <b>Spearman Coefficient without outliers</b>
                         </p>
                         <div id="boxshadow">
                             <img class="picture" src="./images/figures/s_coeff.png" />					
                         </div>
                         <p align="left">
                         <br></br>
-                        Nice. what we see now is how sugar, fat and salt correlates in the products. Visually it seems that most products contain zero of all three quantities, that more sugar tends to imply more salt, 
+                        Using the Spearman coefficent revealed some more trends in the data.
+                        The negative relationship between sugar and salt came out stronger while the the weak positive relationship 
+                        between sugar and fat disappeared, and the positive relationship between salt and fat appeared stronger.
                         </p>
                     </div>
 
+                    <h3> CONCLUSION</h3>
+                    <h4> to be added soon </h4>
                 </div>
             </div>
 
