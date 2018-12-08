@@ -81,7 +81,7 @@ body {
 .topnav {
     overflow: hidden;
 	background-color: #333;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	
 	font-size: 14px;
 	font-style:unset;
 	font-weight: bold;
@@ -95,7 +95,7 @@ body {
     text-align: center;
     padding: 14px 16px;
 	text-decoration: none;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	
 	font-size: 14px;
 	font-style:unset;
 	font-weight: bold;
@@ -105,7 +105,7 @@ body {
 .topnav a:hover {
     background-color: #ddd;
 	color: black;	
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	
 	font-size: 14px;
 	font-style:unset;
 	font-weight: bolder;
@@ -117,7 +117,7 @@ body {
 	background-color:greenyellow; 
 	color: black; 
 	border:2px;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	
 	font-size: 14px;
 	font-style:unset;
 	font-weight: bolder;
@@ -127,7 +127,7 @@ body {
 	color: black; 
 	font-style:unset;
 	font-weight: bolder;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	
 	font-size: 14px;
 }
 
@@ -137,7 +137,3 @@ a
 	font-style:unset;
 }
 
-a hover
-{
-	font-style:unset;
-}
