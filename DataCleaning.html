@@ -78,6 +78,90 @@ asdfasfd adsf
 
 <br><br><br>
 
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Paragraph x																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+	<div class="row">
+		<div id="paragraph6_title" class="container reveal_top">
+			<h3>Clean the Data: Product's Name</h3>
+		</div>
+	
+		<div id="boxshadow" style="background-color:whitesmoke;">	
+			<div class="container reveal_left">
+				<br>
+				<p align="right">
+					<b>Product's Name</b><br>				
+					<div id="boxshadow">
+						<img src="./images/DC_Product.jpg" />					
+					</div>
+				</p>	
+				<p>					
+				</p>
+			</div>
+			
+			<div class="container reveal_right">
+				<p>
+					To clean the Product Name, below actions have been performed in order to ensure that each Product contain a valid Name:
+					<ul>
+						<li>Remove all Products which do not have any Product_name, categories_en and a brands_tags</li>
+						<li>Replace empty Product's Name by their corresponding Category or Brand</li>
+					</ul>
+				</p>
+			<br><br>
+			</div>	
+		</div>
+	</div>
+	
+		
+	<br><br>
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Paragraph x																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+<div class="row">
+		<div id="paragraph6_title" class="container reveal_top">
+			<h3>Clean the Data: Category</h3>
+		</div>
+	
+		<div id="boxshadow" style="background-color:whitesmoke;">	
+			<div class="container reveal_left">
+				<br>
+				<p align="right">
+					<b>Category</b><br>				
+					<div id="boxshadow">
+						<img src="./images/DC_Category.jpg" />					
+					</div>
+				</p>	
+				<p>					
+				</p>
+			</div>
+			
+			<div class="container reveal_right">
+				<p>
+						Create two generic categories (category_1: for Category of level 1 and Category_2: for Category of level 2)
+
+						As there are many products without category, or categories which only contains few products, we decided to:
+						<ul>
+							<li>Assign all orphan products to a category called 'Undefined'</li>
+							<li>Assgin all products to category_1 and category_2 (based of the columns categories_en)</li>
+							<li>Assign all products, belonging to category having less than 10 products, to a category called 'Others'</li>
+						</ul>
+						
+					<br>
+						Unfortunately, as described in the "Data Exploration" most of the Products do not contain any Category and are therefore mapped to 'undefined'.
+
+						
+				</p>
+
+			<br><br>
+			</div>	
+		</div>
+	</div>
+	
+		
+	<br><br>
 
 
 <!-------------------------------------------------------------------------------------------------------------------->	  
@@ -107,23 +191,81 @@ asdfasfd adsf
 			<p>
 				To get those infromation, we implemented, with beautiful soup an interface to Wikipedia:
 				<ul>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Nestlé_brands">https://en.wikipedia.org/wiki/Category:Nestlé_brands</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands">https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands">https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/List_of_Unilever_brands">https://en.wikipedia.org/wiki/List_of_Unilever_brands</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Mars_brands">https://en.wikipedia.org/wiki/Category:Mars_brands</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands">https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands</a></li>
-					<li><a href="https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo">https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Coca-Cola_brands">https://en.wikipedia.org/wiki/Category:Coca-Cola_brands</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands">https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands">https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Nestlé_brands">https://en.wikipedia.org/wiki/Category:Nestlé_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands">https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands">https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/List_of_Unilever_brands">https://en.wikipedia.org/wiki/List_of_Unilever_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Mars_brands">https://en.wikipedia.org/wiki/Category:Mars_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands">https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands</a></li>
+					<li><a target="_blank" href="https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo">https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Coca-Cola_brands">https://en.wikipedia.org/wiki/Category:Coca-Cola_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands">https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands</a></li>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands">https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands</a></li>
 				</ul>
+			
+				<br>
+				This may let the possibility to compare products per company or per brand. As shown in the analysis above, tha data quality of OpenFoodFacts is not having the expected quality. Maybe are we reaching here the limitation of an open community ? Even if we are able to retrieve all those brands from wikipedia, we are not sure to be able to join them with the one from OpenFoodFact.
+
 			</p>
 		<br><br>
 		</div>	
 	</div>
 </div>
 
+
+
+<br><br>
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Paragraph x																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+
+<div class="row">
+	<div id="paragraph6_title" class="container reveal_top">
+		<h3>Enrich the Data: 'Piece of Sugars' per Serving and Product </h3>
+	</div>
+
+	<div id="boxshadow" style="background-color:whitesmoke;">	
+		<div class="container reveal_left">
+			<br>
+			<p align="right">
+				<b>Pieces of Sugars</b><br>				
+				<div id="boxshadow">
+					<img src="./images/pieceOfSugars.jpg" />					
+				</div>
+			</p>				
+			<p class="smallText">
+				Picture provided by Gilles Mairet — Travail personnel, CC BY-SA 4.0, Lien
+			</p>
+		</div>
+		<br>
+		
+		<div class="container reveal_right">
+			<p>
+				Data have been renriched in order to have for each products the piece of sugars contained in a Serving and in the overall Product.
+			</p>
+
+			<p>
+				To perform that, below functions have been created:
+				<ul>
+					<li><b>Enrich_with_sugars_per_serving</b> which is adding the column sugars_per_serving. </li>
+					<li><b>Enrigh_with_sugars_per_product</b>b> which is adding the column sugars_per_product.</li>
+					<li><b>get_first_nbr_from_str</b> which is extracting the first number from the quantity's field.</li>
+					<li><b>multiply_quantity_if_required</b> which is multiplying by the quantity, as some time a product contains many portions.</li>
+					<li><b>enrich_product_quantity</b> which is counting the quantiy, if required quantity is converted in GRAMMS.</li>
+				</ul>
+
+			</p>
+			<p>
+				Once done, below fields could be used to measure the quantity of Sugars: sugars_100g, sugars_per_serving, sugars_per_product: 
+				<div id="boxshadow">
+					<img src="./images/pieceOfSugarsData.jpg" />					
+				</div>
+
+			</p>
+		<br><br>
+		</div>	
+	</div>
+</div>
 
 
 
