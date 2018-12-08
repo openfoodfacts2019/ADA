@@ -80,10 +80,9 @@ body {
 /* Style the top navigation bar */
 .topnav {
     overflow: hidden;
-	background-color: #333;
-	
+	background-color: #333;	
 	font-size: 14px;
-	font-style:unset;
+	font-style:normal;
 	font-weight: bold;
 }
 
@@ -95,19 +94,17 @@ body {
     text-align: center;
     padding: 14px 16px;
 	text-decoration: none;
-	
 	font-size: 14px;
-	font-style:unset;
+	font-style:normal;
 	font-weight: bold;
 }
 
 /* Change color on hover */
 .topnav a:hover {
     background-color: #ddd;
-	color: black;	
-	
+	color: black;		
 	font-size: 14px;
-	font-style:unset;
+	font-style:normal;
 	font-weight: bolder;
 }
 
@@ -116,23 +113,21 @@ body {
 .topselected{
 	background-color:greenyellow; 
 	color: black; 
-	border:2px;
-	
+	border:2px;	
 	font-size: 14px;
-	font-style:unset;
+	font-style:normal;
 	font-weight: bolder;
 }
 
 .selected{
 	color: black; 
-	font-style:unset;
-	font-weight: bolder;
-	
+	font-style:normal;
+	font-weight: bolder;	
 	font-size: 14px;
 }
 
 a
 {
 	color:gray;
-	font-style:unset;
+	font-style:normal;
 }
