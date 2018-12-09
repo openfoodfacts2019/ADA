@@ -176,6 +176,7 @@
             <div class="row">
                 <div id="paragraph2_title" class="container reveal_top">
                     <h3>Sugar, fat and salt</h3>
+                    <h4>Sugar alone is already quite bad, but it's not the only foodstuff that has been cited in relation to health problems. Fat and salts too are easy to overconsume, and to that end we ask the question - do bad things come in threes? Do sugary products also tend to be fatty? Do fatty products also tend to be salty? Let's dive into it!"</h4>
                 </div>
 
                 <div id="boxshadow" style="background-color:whitesmoke;">	
@@ -198,13 +199,15 @@
                         the scatterplots to remain firmly underneath a diagonal line drawn from the upper left to lower right corner.
 
                         </p><p>
-                        Clearly some products have amazing properties - <b>Markets, Soft Cherry Candy Balls</b> for example consist of 100% sugar and 100% fat, <b>Chewing-gum espagnol</b> consist is 100% sugar, 100% salt.
+                        Clearly some products have amazing properties - <b>Markets, Soft Cherry Candy Balls</b> for example consist of 100% sugar 
+                        and 100% fat, <b>Chewing-gum espagnol</b> consist is 100% sugar, 100% salt.
 
                         </p><p>
                         Incredible. Absolutely incredible.
 
                         </p><p>
-                        We would still like to assume that the majority of data is correctly labeled, so in order to get a more true picture of how these three values are distributed we decided to plot the density of the points rather than all the individual points.
+                        We would still like to assume that the majority of data is correctly labeled, so in order to get a more true 
+                        picture of how these three values are distributed we decided to plot the density of the points rather than all the individual points.
                         </p>
 
                     </div>
@@ -221,7 +224,8 @@
                         <br></br>
                         That paints, quite literally, a different picture. 
                         It appears that in general the values only range within tight boundaries.
-                        It is difficult to interpret the pictures however so we make an effort to reduce the effect of outliers by removing products with values beyond two standard deviations of the mean, resulting in dropping 12 % of the products.
+                        It is difficult to interpret the pictures however so we make an effort to reduce the
+                        effect of outliers by removing products with values beyond two standard deviations of the mean, resulting in dropping 12 % of the products.
                         </p>
                     </div>
 
@@ -235,7 +239,9 @@
                         </div>
                         <p align="left">
                         <br></br>
-                        Nice. what we see now is how sugar, fat and salt correlates in the products. Visually it seems that most products contain zero of all three quantities, maybe that more sugar tend to imply less salt... but honestly, it's still difficult to tell.
+                        Nice.
+                        what we see now is how sugar, fat and salt correlates in the products. 
+                        Visually it seems that most products contain zero of all three quantities, maybe that more sugar tend to imply less salt... but honestly, it's still difficult to tell.
                         To amend that we'll start of with trying to use the Pearson coefficent to see how well the relationships in the plots can be described by a simple line.
                         </p>
                     </div>
@@ -250,13 +256,15 @@
                         </div>
                         <p align="left">
                         <br></br>
-                        In this first attempt at measuring the correlation we used the data for all products, and the results point to there being absolutely no relationship (indicated by values close to zero). 
+                        In this first attempt at measuring the correlation we used the data for all products, and the results point to 
+                        there being absolutely no relationship (indicated by values close to zero). 
                         </p><p>
-                        However, the Pearson coefficent takes outliers too strongly into account, so much like we did when we plotted the density we remove the ten percent of the data that tended to extremes.
+                        However, the Pearson coefficent takes outliers too strongly into account, so much like we did when we plotted 
+                        the density we remove the ten percent of the data that tended to extremes.
                         </p><p>
                     </div>
 
- 
+
                     <div class="container reveal_left">
                         <p align="right">
                         <b>Pearson Coefficient matrix without outliers</b>
@@ -266,14 +274,15 @@
                         </div>
                         <p align="left">
                         <br></br>
-                        In this second matrix some trends do appear, though they are very weak. Sugar and salt is weakly negatively correlated, with an increase in one coming at the decrease of another. Meanwhile sugar and fat, fat and salt exhibit a weak positive relationship.
+                        In this second matrix some trends do appear, though they are very weak. Sugar and salt is weakly negatively correlated, 
+                        with an increase in one coming at the decrease of another. Meanwhile sugar and fat, fat and salt exhibit a weak positive relationship.
 
                         With Pearson we got values for the linear relationship between the attributes, but who is to say it has to be strictly linear?
                         For the sake of completedness we also decided to use test the Spearman coefficient to see whether or not the relationship could be described by a monotonic function
                         </p>
                     </div>
 
- 
+
                     <div class="container reveal_left">
                         <p align="right">
                         <b>Spearman Coefficient without outliers</b>
@@ -289,8 +298,32 @@
                         </p>
                     </div>
 
-                    <h3> CONCLUSION</h3>
-                    <h4> to be added soon </h4>
+                    <h3>CONCLUSIONS</h3>
+                    <p align="left">
+                    Before making any statements, let us reiterate - the data is quite suspect. 
+                    While we may have been able to remove the most obviously wrong data we are most likely far from catching everything. 
+                    </p><p>
+                    But let's assume that:
+                    <ul>
+                        <li>the range of products we have available are representative of the true distribution of products</li>
+                        <li>the majority of the data is indeed correctly labeled</li>
+                    </ul>
+                    </p><p>
+                    Then, we can see some weak relationships. 
+                    <ul>
+                        <li>Sugary products have a slight tendency to contain less salt</li>
+                        <li>Sugary products have a slight tendency to contain more fat</li>
+                        <li>Fatty products have a slight tendency to contain more salt</li>
+                    </ul>
+                    So to answer our original questions , do bad things come in threes?
+                    </p><p>
+                    Not to any significant degree no, when taken across all products.
+                    </p><p>
+                    The answer would probably have been quite different if we'd broken the analysis down by categories, such as cake or vegetables.
+
+                    </p>
+                    VWNOTE: If time allows, add the scatterplot colored by salt to view how all three interact? Do the breakdown by category.
+
                 </div>
             </div>
 
@@ -303,11 +336,94 @@
         <br/><br/>
 
 
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- Paragraph2 																									-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+        <div class="row">
+            <div id="paragraph2_title" class="container reveal_top">
+                <h3>Brand type and sugar content</h3>
+                <h4>Major brands tend to have several different product lines. One for customers on a budget, one for those with a bit more to spend, one for those who value organic food.
+                What we wonder is, does the sugar content differ between these sub-brands? Are the cheap products also more sugary? Is ecological food less sweet? Let's have a look!</h4>
+            </div>
+
+            <div id="boxshadow" style="background-color:whitesmoke;">	
+                <div class="container reveal_left">
+                    <p align="right">
+                    <b>Amount of products for different types of brand labels</b>
+                    </p>
+                    <div id="boxshadow">
+                        <img  src="./images/figures/prodcount.png" class="picture"/>	
+                    </div>
+                    <p align="left">
+                    <br></br>
+
+                    Our original intent was to grab the top ten brands, do some research to isolate which of their 
+                    brand-labels corresponded to which category (low-cost, high-cost, ecological, normal) and then analyse the distributions
+                    </p><p>
+                    Assuming that all data was labeled correctly turned out to be a mistake however.
+                    As an example; Auchan is the biggest producer recorded in the database with 5155 products. Auchan has several sub-brands such as
+                    Le Moins Cher for inexpensive products, Mmm! for gourmet products and Mieux Vivre Bio for biological products.
+
+                    </p><p>
+                    Yet when one searches for products with these labels you only find two, zero and one respectively, and it is likely that these have all been grouped under the same label
+                    instead of being treated as distinct.
+
+                    </p><p>
+                    With no good idea for how to automatize the process we manually looked through brands until we found the five with at least a decent representation in all categories
+                    </p><p>
+                    These were migros, coop, carrefour, casino and monoprix.
+                    </p><p>
+
+                </div>
+
+
+                <div class="container reveal_left">
+                    <p align="right">
+                    <b>Probability density for sugar content across different kinds of labels</b>
+                    </p>
+                    <div id="boxshadow">
+                        <img class="picture" src="./images/figures/cat_density.png" />					
+                    </div>
+                    <p align="left">
+                    <br></br>
+                    </p>
+                </div>
+
+                <h3>CONCLUSIONS</h3>
+                <p align="left">
+                TO BE ADDED
+
+                </p>
+                VWNOTE: If time allows, add the scatterplot colored by salt to view how all three interact? Do the breakdown by category.
+
+            </div>
+        </div>
+
+        <br/><br/>
+        <br/><br/>
+        </div>	
+        </div>
+        </div>
+
+        <br/><br/>
+
+
 
 
         <!-------------------------------------------------------------------------------------------------------------------->	  
         <!-- Paragraph2 																									-->
         <!-------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- Paragraph2 																									-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+
+
         <div class="row">
             <div id="paragraph2_title" class="container reveal_top">
                 <h3>Analysis: blabla</h3>
