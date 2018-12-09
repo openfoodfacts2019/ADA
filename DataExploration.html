@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
   	<link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
   	<link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
+	<link rel="stylesheet" type="text/css" href="./css/modal.css">
 
 	<script src="./jquery.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
@@ -91,8 +92,15 @@ asdfasfd adsf
 				<b>Top 10 Creators</b>
 				<br>
 				<div id="boxshadow">
-					<img  src="./images/ImageTopCreator.JPG" class="picture"/>	
+					<a href="#" alt="Click in the Graph to see detailed information.">
+					<img id="imgTopCreator" src="./images/ImageTopCreator.JPG" class="picture" />					
+					</a>
 				</div>
+				
+				<p class="smallText">
+					BarplotGraph generated from jupyter Notebook. Please click on the image to see detailed information.
+				</p>			
+				
 			</p>
 
 			<br/>
@@ -133,9 +141,11 @@ asdfasfd adsf
 			<br/>
 			<p align="right">
 				<b>Top 10 Brands</b>
-				<br/>
+				<br/>				
 				<div id="boxshadow">
-					<img  src="./images/ImageTopBrands.JPG" />					
+					<a href="#" alt="Click in the Graph to see detailed information.">
+						<img id="imgTopBrand" src="./images/ImageTopBrands.JPG" />					
+					</a>
 				</div
 				
 			</p>
@@ -368,7 +378,6 @@ asdfasfd adsf
 <!-------------------------------------------------------------------------------------------------------------------->	  
 <!-- FOOTER		 																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
-
 <footer>
 	<p>steve.rey@epfl.ch</p>
 	<p>yauheni.samasionak@epfl.ch</p>
@@ -378,7 +387,93 @@ asdfasfd adsf
 
 
 <!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Script																											-->
+<!-- ALL MODAL WINDOWS
+<!-------------------------------------------------------------------------------------------------------------------->
+
+<!-- The Modal - Top 10 Creator-->
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close1">&times;</span>
+      <h2>Overal information about Contributors</h2>
+    </div>
+    <div class="modal-body">
+      <br>
+	  <p>Top 10 Contributors (Counts & Percentage)</p>
+      <p>
+		<div id="boxshadow">
+			
+			<table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
+				<tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>creator</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
+				<tr><td>kiliweb</td><td align="right">299'820</td><td align="right">43.987547</tr>
+				<tr style="background-color:whitesmoke"><td>usda-ndb-import</td><td align="right">169'861</td><td align="right">24.920848</tr>
+				<tr><td>openfoodfacts-contributors</td><td align="right">82'719</td><td align="right">12.135968</tr>
+				<tr style="background-color:whitesmoke"><td>date-limite-app</td><td align="right">17'453</td><td align="right">2.560585</tr>
+				<tr><td>openfood-ch-import</td><td align="right">11'459</td><td align="right">1.681186</tr>
+				<tr style="background-color:whitesmoke"><td>tacite</td><td align="right">8'438</td><td align="right">1.237966</tr>
+				<tr><td>sebleouf</td><td align="right">8'359</td><td align="right">1.226376</tr>
+				<tr style="background-color:whitesmoke"><td>tacinte</td><td align="right">5'282</td><td align="right">0.774939</tr>
+				<tr><td>stephane</td><td align="right">2'774</td><td align="right">0.406982</tr>
+				<tr style="background-color:whitesmoke"><td>javichu</td><td align="right">2'766</td><td align="right">0.405809</tr>			
+			</table>
+		</div>
+		<br>
+		<p>
+			There is a total of 681'602 records, and 3 of them are empty (0.0004%)
+		</p>
+	  </p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!-- The Modal - Top 10 Brands -->
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close2">&times;</span>
+      <h2>Overal information about Brands</h2>
+    </div>
+    <div class="modal-body">
+      <br>
+	  <p>Top 10 Brands (Counts & Percentage)</p>
+      <p>
+		<div id="boxshadow">
+			
+			<table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
+				<tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>creator</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
+				<tr><td>Carrefour</td><td align="right">5'384</td><td align="right">0.789904%</tr>
+				<tr style="background-color:whitesmoke"><td>Auchan</td><td align="right">5'313</td><td align="right">0.779487%</tr>
+				<tr><td>U</td><td align="right">4'401</td><td align="right">0.645685%</tr>
+				<tr style="background-color:whitesmoke"><td>Casino</td><td align="right">3'130</td><td align="right">0.459212%</tr>
+				<tr><td>Leader Price</td><td align="right">2'825</td><td align="right">0.414465%</tr>
+				<tr style="background-color:whitesmoke"><td>Cora</td><td align="right">2'230</td><td align="right">0.327170%</tr>
+				<tr><td>Meijer</td><td align="right">1'997</td><td align="right">0.292986%</tr>
+				<tr style="background-color:whitesmoke"><td>Kroger</td><td align="right">1'673</td><td align="right">0.245451%</tr>
+				<tr><td>Picard</td><td align="right">1'517</td><td align="right">0.222564%</tr>
+				<tr style="background-color:whitesmoke"><td>Ahold</td><td align="right">1'370</td><td align="right">0.200997%</tr>			
+			</table>
+		</div>
+		<br>
+		<p>
+			There is a total of 681'602 records, and 2'211'773 of them are empty (32.44958%)
+		</p>
+	  </p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Script Scroll																											-->
 <!-------------------------------------------------------------------------------------------------------------------->
 <script>
     // JavaScript
@@ -388,6 +483,62 @@ asdfasfd adsf
     sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
 </script>
 
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Script Modal1
+<!-------------------------------------------------------------------------------------------------------------------->
+<script>
+// Get the modal
+var modal1 = document.getElementById('myModal1');
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("imgTopCreator");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal 
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
+
+	
+	
+
+</script>
+
+
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Script Modal2
+<!-------------------------------------------------------------------------------------------------------------------->
+<script>
+// Get the modal
+var modal2 = document.getElementById('myModal2');
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("imgTopBrand");
+
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal 
+btn2.onclick = function() {
+    modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+
+</script>
 
 </body>
 </html>
