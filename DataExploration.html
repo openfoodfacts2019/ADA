@@ -231,12 +231,69 @@ asdfasfd adsf
 			</p>
 			<br/><br/>
 		</div>	
+		
+					
+		
 	</div>
 </div>
 
 <br/><br/>
 
 
+
+<!-------------------------------------------------------------------------------------------------------------------->	  
+<!-- Paragraph4																									-->
+<!-------------------------------------------------------------------------------------------------------------------->
+<div class="row">
+	<div id="paragraph4_title" class="container reveal_top">
+		<h3> Understanding the Data: Distribution of Products by Countries</h3>
+	</div>
+
+	
+	<div id="boxshadow" style="background-color:whitesmoke;">	
+		<div class="container reveal_left">
+			<br/>
+			<p align="right">
+				<b>Distribution of Products by Country</b>
+				<br>
+				<div id="boxshadow">
+					<img src="./images/DE_Country.jpg" />					
+				</div>
+				
+			</p>
+			<br/>
+		</div>
+		
+		<div class="container reveal_right">
+			<p>
+				Even if Country information are not well structured, we may proceed with some cleaning activities.
+			</p>
+			<p>
+				For this purpose, we tried to create a Country Map with folium, we propose the following steps:
+				<ul>
+					<li>Load a files containing a list of countries and iso three letter code</li>
+					<li>Cleaning/Parsing the country Name from openFoodFacts, if required some synonyms have to be identified. (we may research if a synonmy's list could be founded. at this stage, for this exercise, we decided to create our own list)</li>
+					<li>Mapping the normalized country with a proper country name</li>
+					<li>Showing a folium Map and mapping the value through iso 3 letter codes and retrieving the percentage accordingly</li>
+				</ul>
+			</p>
+			<br>
+			<p>
+				It's clear, by looking on the map, that data for only few countries have been fulfilled. Based of this, we can say that most of the products are assigned to
+					<ul>
+						<li>France with 409'951 products (~60%)</li>
+						<li>United States of America with 174'494 products (~25%)</li>
+						<li>Switzerland with 13'543 products (~1.98%)</li>
+						<li>Germany with 11'629 products (~1.70%)</li>
+						<li>All others Countries have less than 1% each of representativity</li>
+					</ul>
+			</p>
+			<br/><br/>
+		</div>	
+	</div>
+</div>
+
+<br/><br/>
 
 <!-------------------------------------------------------------------------------------------------------------------->	  
 <!-- Paragraph4																									-->
