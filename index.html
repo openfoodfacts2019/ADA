@@ -112,28 +112,31 @@
       <p>There are lots of different dimensions/metrics which could be used to analyse/slice the data: dates when the product was added and last modified, produced country, brand, categories (e.g. snack, dessert), country / store where the product was purchased, size and weight of the product, amount of fat, sugar, vitamins, chemicals, ingredients as text etc
 			We will explore the dimensions/metrics above and relate some of those to each other or such generic metrics as country (producer or consumer) GDP, life expectancy (vitamins, salt, sugar, other chemicals), expore which country/store is the biggest produce/consumer of product by brand/ingredients etc. We will also check how some of the metrics evolve over time and perform some Data Cleaning and enrichments.			
 		</p>
+			<div id="boxshadow">
+				<p style="border:0px solid;background-color:whitesmoke;text-align: center;font-weight: bold;"><br>Main Research Questions<br><br></p>
+				<p>
+					What is the most sugary product, and what is its nutrition score ?
+				</p>
+				<p>
+					Is there a relation between the amount of fat, sugar and salt in products ? 
+				</p>
+				<p>
+					Does the amount of sugar in a product depend on the brand type (low-cost, high-cost, biological etc) ?
+				</p>
+				<p>
+					Check the products which may have more than 25gr as recommanded by <a href="http://www.who.int/nutrition/sugars_public_consultation/en/" target="_blank" title="OMS"><b>OMS</b></a> .
+				</p>	
+			</div>	
+			<br><br>
 			<p>
-				1. What is the most sugary product, and what is its nutrition score ?
-			</p>
-			<p>
-				2. Is there a relation between the amount of fat, sugar and salt in products ? 
-			</p>
-			<p>
-				3. Does the amount of sugar in a product depend on the brand type (low-cost, high-cost, biological etc) ?
-			</p>
-			<p>
-				4. Check the products which may have more than 25gr as recommanded by OMS: http://www.who.int/nutrition/sugars_public_consultation/en/
-			</p>	
-
-		   <p>
-			   	We were maybe a little ambition about the analyis we would like to perform and discovered many discrepancies on the Data. Indeed, we learnt during the lecturer that the main activities performed by a Data Scientist is Data Cleaning. Based on the Data Quality of the www.openFoodFacts.org Data, we are fully agree with this assertion and we even decided to spend more time on Data Exploration and Data Cleaning.
-				Indeed in order to perform good analysis, it's crucial to consolidate the firt layer and understand the Data Set. We even think that this open Database should be more normalized and structured, which may offer a more solid base for further Analyis.
-			</p>
-			<p>
-				What is the goal to perform deeper analyis, when underlying data are not certified, checked, cleaned, cleansed and normalized. 
-				Furtheremore as you will discover in this Notebook, most of the dimensions have to be used with precaution and we may ask ourself if we could trust OpenFoodFacts Data ?
-			</p>
-
+					We were maybe a little ambition about the analyis we would like to perform and discovered many discrepancies on the Data. Indeed, we learnt during the lecturer that the main activities performed by a Data Scientist is Data Cleaning. Based on the Data Quality of the www.openFoodFacts.org Data, we are fully agree with this assertion and we even decided to spend more time on Data Exploration and Data Cleaning.
+					Indeed in order to perform good analysis, it's crucial to consolidate the firt layer and understand the Data Set. We even think that this open Database should be more normalized and structured, which may offer a more solid base for further Analyis.
+				</p>
+				<p>
+					What is the goal to perform deeper analyis, when underlying data are not certified, checked, cleaned, cleansed and normalized. 
+					Furtheremore as you will discover in this Notebook, most of the dimensions have to be used with precaution and we may ask ourself if we could trust OpenFoodFacts Data ?
+				</p>
+				
 		</p>
 			   
 			   
@@ -208,8 +211,17 @@
 			</li>
 		</ul>	
 		</p>
-      </div>
-  </div>
+    </div>
+  
+	<div class="col-sm-4">
+		<h3># Sources</h3>
+		<p>Realised in the context of the course of <a href="https://edu.epfl.ch/coursebook/en/applied-data-analysis-CS-401" target="_blank"> EPFL Applied Data Analysis (CS-401)</a> teached by <a href="https://people.epfl.ch/278364" target="_blank">Robert West</a>. Jupyter Notebook/Sources could be founded <a href="https://github.com/esamosenok/ADA_Project_2018" target="_blank" title="github">here</a>. </p>
+	</div>
+
+
+</div>
+
+
 
 <br/><br/>
 
@@ -239,9 +251,9 @@
 <!-- FOOTER		 																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
 <footer>
-	<p>steve.rey@epfl.ch</p>
-	<p>yauheni.samasionak@epfl.ch</p>
-	<p>victor.wiklund@epfl.ch</p> 
+	<p><a href="https://www.linkedin.com/in/steverey/" target="_blank" title="LinkedIn Steve Rey">steve.rey@epfl.ch</a></p>
+	<p><a href="https://www.linkedin.com/in/evgeniy-samosenok-83261a1b/" target="_blank" title="LinkedIn Yauheni Samasionak">yauheni.samasionak@epfl.ch</a></p>
+	<p><a href="https://people.epfl.ch/victor.wiklund" target="_blank" title="EPFL Victor Wiklund">victor.wiklund@epfl.ch</a></p> 
 </footer>
 
 
