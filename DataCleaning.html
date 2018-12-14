@@ -66,17 +66,22 @@
 <!-------------------------------------------------------------------------------------------------------------------->	  
 <!-- Paragraph1 																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div id="paragraph1_title">
-		<h3>#Data Cleaning</h3>
+	<div class="row">
+		<div id="paragraph1_title">
+			<h3>#Data Cleaning</h3>
+		</div>
+
+		<div >	
+			<p>
+			So far, we clean the data in order to ensure to have usable dimension, like Product's Name, Category 1 and Category 2 (Denormalization of Main Category) and Brand.
+			</p>
+			<p>
+				Furthermore, we enrich the data with Brand/Company information and with "Piece of Sugars". For this one, we added the calculated fields sugars_per_serving and sugars_per_product, which have been calculated from quantity (which requires some type conversion, like kg to mg).				
+			</p>
+		</div>
 	</div>
 
-	<div >	
-asdfasfd adsf
-	</div>
-</div>
-
-<br><br><br>
+	<br><br>
 
 <!-------------------------------------------------------------------------------------------------------------------->	  
 <!-- Paragraph x																									-->
@@ -120,7 +125,7 @@ asdfasfd adsf
 <!-------------------------------------------------------------------------------------------------------------------->	  
 <!-- Paragraph x																									-->
 <!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
+	<div class="row">
 		<div id="paragraph6_title" class="container reveal_top">
 			<h3>Clean the Data: Category</h3>
 		</div>
@@ -556,7 +561,7 @@ asdfasfd adsf
 				To perform that, below functions have been created:
 				<ul>
 					<li><b>Enrich_with_sugars_per_serving</b> which is adding the column sugars_per_serving. </li>
-					<li><b>Enrigh_with_sugars_per_product</b>b> which is adding the column sugars_per_product.</li>
+					<li><b>Enrich_with_sugars_per_product</b> which is adding the column sugars_per_product.</li>
 					<li><b>get_first_nbr_from_str</b> which is extracting the first number from the quantity's field.</li>
 					<li><b>multiply_quantity_if_required</b> which is multiplying by the quantity, as some time a product contains many portions.</li>
 					<li><b>enrich_product_quantity</b> which is counting the quantiy, if required quantity is converted in GRAMMS.</li>
@@ -594,7 +599,6 @@ asdfasfd adsf
 			</tr>
 		</table>
 	</div>
-
 
 
 	<div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
