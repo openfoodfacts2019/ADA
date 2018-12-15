@@ -1,528 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>cs_team_beta_hw2: Open Food Facts</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	  
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
-  	<link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
-  	<link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
+    <head>
+        <title>cs_team_beta_hw2: Open Food Facts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-	<script src="./jquery.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-    <script src="./js/scrollreveal.min.js"></script>
-    <script type="text/javascript" src="./js/d3.min.js"></script>
-	<script>
-		(function() {
-			var config = {
-				viewFactor: 0.08,
-				duration: 800,
-				reset: true,
-			}
-			window.sr = new ScrollReveal(config)
-		})()
-		</script>
-</head>
-<body>
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
+        <link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
+        <link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
 
-
-<!------------------------------------------------------------------------>  
-<!-- Header																-->
-<!------------------------------------------------------------------------>  
-<div class="header" style="background-image:url(./images/left.jpg);background-position: left top; background-repeat: no-repeat">
-	<h1>Eeat less sugar,<br>you're sweet enough already</h1>
-	<p style="font-size:9px;color:gray">cs_team_beta_hw2 - Automn 2018</p>
-	<p>
-		<a href="https://world.openfoodfacts.org/data" target="_blank">
-			<img alt="Open Food Facts" src="./images/openfoodfacts-logo-en-178x150.png" srcset="./images/openfoodfacts-logo-en-178x150.png" width="150px"/>
-		</a>		
-	</p>
-</div>
+        <script src="./jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/scrollreveal.min.js"></script>
+        <script type="text/javascript" src="./js/d3.min.js"></script>
+        <script>
+            (function() {
+                var config = {
+                    viewFactor: 0.08,
+                    duration: 800,
+                    reset: true,
+                }
+                window.sr = new ScrollReveal(config)
+            })()
+        </script>
+    </head>
+    <body>
 
 
-<!------------------------------------------------------------------------>  
-<!-- MENU 																-->
-<!------------------------------------------------------------------------>  
-<div class="topnav" style="vertical-align: middle;" > 
-	<table align="center"><tr>
-		<td><a href="./index.html">Home</a></td>
-		<td><a href="./DataExploration.html" class="topselected"><div class="selected">Data Exploration</div></a></td>
-		<td><a href="./DataCleaning.html">Data Cleaning</a></td>
-		<td><a href="./DataAnalysis.html">Data Analysis</a></td>
-		<td><a href="./DataGame.html">Data Game</a></td>
-	</tr></table>
-</div>
-
-  
-<!------------------------------------------------------------------------>  
-<!-- Top Text  															-->
-<!------------------------------------------------------------------------>    
-<div class="container">
+        <!------------------------------------------------------------------------>  
+        <!-- Header																-->
+        <!------------------------------------------------------------------------>  
+        <div class="header" style="background-image:url(./images/left.jpg);background-position: left top; background-repeat: no-repeat">
+            <h1>Eeat less sugar,<br>you're sweet enough already</h1>
+            <p style="font-size:9px;color:gray">cs_team_beta_hw2 - Automn 2018</p>
+            <p>
+            <a href="https://world.openfoodfacts.org/data" target="_blank">
+                <img alt="Open Food Facts" src="./images/openfoodfacts-logo-en-178x150.png" srcset="./images/openfoodfacts-logo-en-178x150.png" width="150px"/>
+            </a>		
+            </p>
+        </div>
 
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph1 																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div id="paragraph1_title">
-		<h3>#Data Exploration</h3>
-	</div>
+        <!------------------------------------------------------------------------>  
+        <!-- MENU 																-->
+        <!------------------------------------------------------------------------>  
+        <div class="topnav" style="vertical-align: middle;" > 
+            <table align="center"><tr>
+                    <td><a href="./index.html">Home</a></td>
+                    <td><a href="./DataExploration.html" class="topselected"><div class="selected">Data Exploration</div></a></td>
+                    <td><a href="./DataCleaning.html">Data Cleaning</a></td>
+                    <td><a href="./DataAnalysis.html">Data Analysis</a></td>
+                    <td><a href="./DataGame.html">Data Game</a></td>
+                </tr></table>
+        </div>
 
-	<div >	
-		Before doing deep analysis, we decided to understand the content of <a href="https://world.openfoodfacts.org/data" target="_blank">Open Food Facts</a>.
-		Indeed it's important to have an idea about how the data have been collected, by whom, when, in which way, in order to have a better understanding of the underlying data.
-		This approach may help us to understand the Data and evaluate the accuracy of them.
-		</p>
-		<p>
-		To perform this Data Exploration, we decided to focus on overall information about "<b>Contributors</b>", "<b>Brands</b>", "<b>Countries</b>" and "<b>Categories</b>".
-		</p>
-	</div>
-</div>
 
-<br><br><br>
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph1 																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div id="paragraph1_title" class="container reveal_top">
-		<h3>Understanding the Data: Overall information about Contributors </h3>
-	</div>
+        <!------------------------------------------------------------------------>  
+        <!-- Top Text  															-->
+        <!------------------------------------------------------------------------>    
+        <div class="container">
 
-	<div id="boxshadow" style="background-color:whitesmoke;">	
-		<div class="container reveal_left">
-			<br/>
-			<p align="right">
-				<b>Top 10 Creators</b>
-				<br>
-				<div id="boxshadow">					
-					<img id="imgTopCreator" src="./images/ImageTopCreator.JPG" class="picture" />					
-				</div>
-				
-				<p class="smallText">
-					Distribution of Products by Creator, generated with Seaborn from jupyter Notebook.
-				</p>						
-			</p>
-			<br/>
-		</div>
-		
-		
-		
-		<div class="container reveal_right">
-			
-			<br/>
-			<div id="boxshadow">
-				<table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
-					<tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Creators</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
-					<tr><td>kiliweb</td><td align="right">299'820</td><td align="right">43.987547</tr>
-					<tr style="background-color:whitesmoke"><td>usda-ndb-import</td><td align="right">169'861</td><td align="right">24.920848</tr>
-					<tr><td>openfoodfacts-contributors</td><td align="right">82'719</td><td align="right">12.135968</tr>
-					<tr style="background-color:whitesmoke"><td>date-limite-app</td><td align="right">17'453</td><td align="right">2.560585</tr>
-					<tr><td>openfood-ch-import</td><td align="right">11'459</td><td align="right">1.681186</tr>
-					<tr style="background-color:whitesmoke"><td>tacite</td><td align="right">8'438</td><td align="right">1.237966</tr>
-					<tr><td>sebleouf</td><td align="right">8'359</td><td align="right">1.226376</tr>
-					<tr style="background-color:whitesmoke"><td>tacinte</td><td align="right">5'282</td><td align="right">0.774939</tr>
-					<tr><td>stephane</td><td align="right">2'774</td><td align="right">0.406982</tr>
-					<tr style="background-color:whitesmoke"><td>javichu</td><td align="right">2'766</td><td align="right">0.405809</tr>			
-				</table>					
-			</div>
-			<p class="smallText">
-				681'599 records have Creator, 3 records do not have any Creator (0.0004%)
-			</p>
-			
-			<br/>
-		</div>	
-		
-		<div class="container reveal_left">
-			<p align="left">
-					More than <b>80% of the Products</b> have been created by the first 3 Contributors. 					
-					We could almost consider individual contributors as marginal.
-					<br><br>
-					So far we can see that <a href="https://kiliweb.fr/" target="_blank"><b>Kiliweb</b></a> is the most active contributors and is continously adding products. <a href="https://www.usda.gov/" target="_blank"><b>usda-ndb-import</b></a>, which is the <a href="https://www.usda.gov/" target="_blank">'United States Department of Agriculture'</a> seems to not contribute anymore to the <a href="https://world.openfoodfacts.org/data" target="_blank"><b>Open Food Facts Database</b></a> and has been only imported once. The open community of openfoodfacts-contributors seems to be growing day after day. 
-					
-			</p>
-			
-			<div id="boxshadow">
-				<img class="picture" src="./images/ImageCreatedTime.JPG" />					
-			</div>
-			<p class="smallText">
-				Evolution of added items per Contributor
-			</p>
-			
-			<br/>
-			<p>
-				The diversity of contributors may lead to mismatched data. Most of them could be considered as unknown and data accuracy could therefore not be checked/validated.
-				Furthermore, most of the contributors only fulfill information about their owned country. We can already assume that this Open Source Database may contain a lot of duplicate/similar Products.				
-				We can already assume, based of the main contributors, that the diversity of product by country is not representative and comparison against country is most probably not relevant enough.
-			</p>
-			
-			<br/><br/>
-		</div>	
-	</div>
-</div>
+
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph1 																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph1_title">
+                    <h3>#Data Exploration</h3>
+                </div>
+
+                <div >	
+                    Before starting to perform the analysis for our research questions, we decided to understand the content of <a href="https://world.openfoodfacts.org/data" target="_blank">Open Food Facts</a>.
+                    Indeed it's important to have an idea about how the data have been collected, by whom, when and in which way, in order to have a better understanding of the underlying data.
+                    This approach may help us to understand the Data and evaluate the accuracy of it.
+                    </p>
+                    <p>
+                    To perform this Data Exploration, we decided to focus on the overall information about "<b>Contributors</b>", "<b>Brands</b>", "<b>Countries</b>" and "<b>Categories</b>".
+                    </p>
+                </div>
+            </div>
+
+            <br><br><br>
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph1 																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph1_title" class="container reveal_top">
+                    <h3>Understanding the Data: Overall information about Contributors </h3>
+                </div>
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="right">
+                        <b>Top 10 Creators</b>
+                        <br>
+                        <div id="boxshadow">					
+                            <img id="imgTopCreator" src="./images/ImageTopCreator.JPG" class="picture" />					
+                        </div>
+
+                        <p class="smallText">
+                        Distribution of Products by Creator, generated with Seaborn from jupyter Notebook.
+                        </p>						
+                        </p>
+                        <br/>
+                    </div>
 
 
 
+                    <div class="container reveal_right">
 
-<br/><br/>
+                        <br/>
+                        <div id="boxshadow">
+                            <table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
+                                <tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Creators</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
+                                <tr><td>kiliweb</td><td align="right">299'820</td><td align="right">43.987547</tr>
+                                <tr style="background-color:whitesmoke"><td>usda-ndb-import</td><td align="right">169'861</td><td align="right">24.920848</tr>
+                                <tr><td>openfoodfacts-contributors</td><td align="right">82'719</td><td align="right">12.135968</tr>
+                                <tr style="background-color:whitesmoke"><td>date-limite-app</td><td align="right">17'453</td><td align="right">2.560585</tr>
+                                <tr><td>openfood-ch-import</td><td align="right">11'459</td><td align="right">1.681186</tr>
+                                <tr style="background-color:whitesmoke"><td>tacite</td><td align="right">8'438</td><td align="right">1.237966</tr>
+                                <tr><td>sebleouf</td><td align="right">8'359</td><td align="right">1.226376</tr>
+                                <tr style="background-color:whitesmoke"><td>tacinte</td><td align="right">5'282</td><td align="right">0.774939</tr>
+                                <tr><td>stephane</td><td align="right">2'774</td><td align="right">0.406982</tr>
+                                <tr style="background-color:whitesmoke"><td>javichu</td><td align="right">2'766</td><td align="right">0.405809</tr>			
+                            </table>					
+                        </div>
+                        <p class="smallText">
+                        681'599 records have Creator, 3 records do not have any Creator (0.0004%)
+                        </p>
 
+                        <br/>
+                    </div>	
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph2 																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div id="paragraph2_title" class="container reveal_top">
-		<h3> Understanding the Data: Overall information about Brands </h3>
-	</div>
+                    <div class="container reveal_left">
+                        <p align="left">
+                        More than <b>80% of the Products</b> have been created by the first 3 Contributors.
+                        We could almost consider individual contributors as marginal.
+                        <br><br>
+                        So far we can see that <a href="https://kiliweb.fr/" target="_blank"><b>Kiliweb</b></a> is the most active contributor and is continously adding products. <a href="https://www.usda.gov/" target="_blank"><b>usda-ndb-import</b></a>, which is the <a href="https://www.usda.gov/" target="_blank">'United States Department of Agriculture'</a> seems to not contribute anymore to the <a href="https://world.openfoodfacts.org/data" target="_blank"><b>Open Food Facts Database</b></a> and has been only imported once. The open community of openfoodfacts-contributors seems to be growing day after day. 
 
-	<div id="boxshadow" style="background-color:whitesmoke;">	
-		<div class="container reveal_left">
-			<br/>
-			<p align="right">
-				<b>Top 10 Brands</b>
-				<br/>				
-				<div id="boxshadow">
-					<img id="imgTopBrand" src="./images/ImageTopBrands.JPG" />										
-				</div>
-				<p class="smallText">
-					Distribution of Products by Brand, generated with Seaborn from jupyter Notebook.
-				</p>
+                        </p>
 
-			</p>
-			<br/>
-		</div>
-		
-				
-		<div class="container reveal_right">				
-			<br/>
-			
-			<div id="boxshadow">				
-				<table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
-					<tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Brands</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
-					<tr><td>Carrefour</td><td align="right">5'384</td><td align="right">0.789904%</tr>
-					<tr style="background-color:whitesmoke"><td>Auchan</td><td align="right">5'313</td><td align="right">0.779487%</tr>
-					<tr><td>U</td><td align="right">4'401</td><td align="right">0.645685%</tr>
-					<tr style="background-color:whitesmoke"><td>Casino</td><td align="right">3'130</td><td align="right">0.459212%</tr>
-					<tr><td>Leader Price</td><td align="right">2'825</td><td align="right">0.414465%</tr>
-					<tr style="background-color:whitesmoke"><td>Cora</td><td align="right">2'230</td><td align="right">0.327170%</tr>
-					<tr><td>Meijer</td><td align="right">1'997</td><td align="right">0.292986%</tr>
-					<tr style="background-color:whitesmoke"><td>Kroger</td><td align="right">1'673</td><td align="right">0.245451%</tr>
-					<tr><td>Picard</td><td align="right">1'517</td><td align="right">0.222564%</tr>
-					<tr style="background-color:whitesmoke"><td>Ahold</td><td align="right">1'370</td><td align="right">0.200997%</tr>			
-				</table>
-			</div>			
-			<p class="smallText">
-				There is a total of 681'602 records, and 2'211'773 of them are empty (32.44958%)
-			</p>			
-		</div>
-		
-		<br>
-		
-		<div class="container reveal_left">
-			<p>
-				<b>32% of the products</b> are not assigned to any Brands. Furthermore the 6 most big brands of Open Food Facts are French Mall. This sounds strange that main of the products are repertoried in France.
-				French cheese, like Product Code <a title="Fromage Reflets de France" href="https://world.openfoodfacts.org/product/3245390058782/petit-munster-gerome-reflets-de-france" target="_blank"><b>'3245390058782' Petit Munster Géromé</b></a>, could not explain this delta ? Really ? Should we perform some deep analysis in this area !?		
-			</p>			
-			<br/>
-		</div>	
-		
-		
-		
-		<div class="container reveal_right">				
-			<br/>
-			
-			<div id="boxshadow">				
-				<a title="Fromagerie chez moi" href="http://goatcheesesoffrance.com/" target="_blank">
-					<img src="./images/french-chevre-regions-2.png"  style="border:None;" />											
-				</a>				
-			</div>			
-			<p class="smallText">
-				List of French Cheese, by <a href="http://goatcheesesoffrance.com/the-cheeses/#chevre-regions" title="goatcheeseoffrance">http://goatcheesesoffrance.com/the-cheeses/#chevre-regions</a>
-			</p>
-			<br>
-			<p>
-				It's true that there is a lot of cheese in France and that some of them are realy famous ! as illustred above or in <a href="https://en.wikipedia.org/wiki/List_of_cheeses#France" target="_blank"><b>Wikipedia</b></a> !				
-				
-				<br><br>		
-				There is unlikely no correlation with cheese and the number of French Products. The number of French Products could be most likely explained by the fact that the biggest contributor is a French Agency, called Kiliweb.				
-				This may explain why there are soo much products assigned to French Brands or assigned to France. 
-				
-				
-			</p>			
-		</div>
-		
-			<br><br>
-	</div>
-</div>
+                        <div id="boxshadow">
+                            <img class="picture" src="./images/ImageCreatedTime.JPG" />					
+                        </div>
+                        <p class="smallText">
+                        Evolution of added items per Contributor
+                        </p>
 
-<br/><br/>
-
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph3																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div id="paragraph3_title" class="container reveal_top">
-		<h3> Understanding the Data: Overall information about Countries </h3>
-	</div>
-
-	<div id="boxshadow" style="background-color:whitesmoke;">	
-		<div class="container reveal_left">
-			<br/>
-			<p align="right">
-				<b>Top 10 Largest Countries</b>
-				<br>
-				<div id="boxshadow">
-					<img src="./images/ImageTopCountries.JPG" />					
-				</div>
-				<p class="smallText">
-					Distribution of Products by Country, generated by Seaborn from jupyter Notebook.
-				</p>
-
-			</p>
-			<br/>
-		</div>
-		
-		<div class="container reveal_right">
-			
-			<br/>
-			<div id="boxshadow">
-				<table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
-					<tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Countries</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
-					<tr><td>France</td><td align="right">409'951</td><td align="right">60.145217%</tr>
-					<tr style="background-color:whitesmoke"><td>United States</td><td align="right">173'494</td><td align="right">25.453857%</tr>
-					<tr><td>Switzerland</td><td align="right">13'543</td><td align="right">1.986937%</tr>
-					<tr style="background-color:whitesmoke"><td>Germany</td><td align="right">11'629</td><td align="right">1.706128%</tr>
-					<tr><td>Spain</td><td align="right">6'104</td><td align="right">0.895537%</tr>
-					<tr style="background-color:whitesmoke"><td>France, Germany</td><td align="right">5'884</td><td align="right">0.863260%</tr>
-					<tr><td>United Kingdom</td><td align="right">5'643</td><td align="right">0.827903%</tr>
-					<tr style="background-color:whitesmoke"><td>Belgium</td><td align="right">5'309</td><td align="right">0.778900%</tr>
-					<tr><td>France, Switzerland</td><td align="right">4'345</td><td align="right">0.637469%</tr>
-					<tr style="background-color:whitesmoke"><td>Belgium, France</td><td align="right">3'505</td><td align="right">0.514230%</tr>			
-				</table>					
-			</div>
-			<p class="smallText">
-				681'058 records have Countries, 544 records do not have any country (0.07%)
-			</p>
-			
-			<br/>
-		</div>	
-		
-		<div class="container reveal_left">
-			<p>
-				We discover the same behavior than previous analyis. Most of the products are assigned to France which was the expectation as the main contributor is kiliweb (France Web Agency). This is consistent, especially after the analysis of the contributors and brands above.
-			</p>
-			<p>
-				Even if most of the products have been assigned to country, as only <b>544 products</b> are not linked to any country, we discover that there is 1361 countries.
-			</p>
-			<p>
-				So far it seems that countries contain a list of countries and not unique countries.
-			</p>
-			<p>
-				Furthermore most of the products are linked to one or two countries ONLY, which is very suspicious. 
-			</p>
-			<p>	
-				<table><tr><td>
-					<a href="http://world-en.openfoodfacts.org/product/0011110739322/peanut-butter-creamy" target="_blank" title="Peanut Butter">
-						<img class="picture" src="./images/PeanutButter.jpg"/>	
-					</a>
-				</td>
-				<td>
-				We could assume per example that this <a href="http://world-en.openfoodfacts.org/product/0011110739322/peanut-butter-creamy" target="_blank" title="Peanut Butter"><b>Peanut Butter</b></a>  assigned to France could be founded in another country like USA as it is made by <a href="https://fr.wikipedia.org/wiki/Kroger" title="Kroger" target="_blank"><b>Kroger</b></a>.
-				<br><br>
-				Most probably this product, which is being sold in France, had been repertoried as French's product by a French Contributor. 
-				But we could be sure that this peanut butter is sold in USA too, maybe in a different product's name.
-				</td>
-				</tr></table>
-			</p>
-			<br>
-
-			<br/><br/>
-		</div>	
-		
-					
-		
-	</div>
-</div>
-
-<br/><br/>
+                        <br/>
+                        <p>
+                        The diversity of contributors may lead to mismatched data. Most of the contributors could be considered as unknowns, and data accuracy could therefore not be checked/validated.
+                        Furthermore, most of the contributors simply add products they find in their home country, leading to the risk of duplicate/similar products in the database.
+                        We can already assume, based of the main contributors, that the diversity of products by country is not representative and comparison against country is most probably not relevant enough.
+                        </p>
+                        <br/><br/>
+                    </div>	
+                </div>
+            </div>
 
 
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph4																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div id="paragraph4_title" class="container reveal_top">
-		<h3> Understanding the Data: Distribution of Products by Countries</h3>
-	</div>
 
-	
-	<div id="boxshadow" style="background-color:whitesmoke;">	
-		<div class="container reveal_left">
-			<br/>
-			<p align="right">
-				<b>Distribution of Products by Country</b>
-				<br>
-				<div id="boxshadow">
-					<img src="./images/DE_Country.jpg" />					
-				</div>
-				<p class="smallText">
-					Distribution of Products by Country, generated with Folium from jupyter Notebook.
-				</p>
-
-			</p>
-			<br/>
-		</div>
-		
-		<div class="container reveal_right">
-			<p>
-				Even if Country information are not well structured, we proceeded with some cleaning activities.
-			</p>
-			<p>
-				For this purpose, we tried to create a Country Map with folium, and performed below actions:
-				<ul>
-					<li>Load a files containing a list of countries and ISO Three Letter Code</li>
-					<li>Clean/Parse the country Name from openFoodFacts</li>
-					<li>Map the normalized country with a proper Country's Name</li>
-					<li>Show a folium Map and map the value through iso 3 Letter Codes and retrieve the percentage accordingly</li>
-				</ul>
-			</p>
-			<br>
-			<p>
-				It's clear, by looking on the map, that data for only few countries have been fulfilled. Based of this, we can say that most of the products are assigned to
-					<ul>
-						<li>France with 409'951 products (~60%)</li>
-						<li>United States of America with 174'494 products (~25%)</li>
-						<li>Switzerland with 13'543 products (~1.98%)</li>
-						<li>Germany with 11'629 products (~1.70%)</li>
-						<li>All others Countries have less than 1% each of representativity</li>
-					</ul>
-			</p>
-			<p>
-				So far we can conclude that this field 'country' has to be used with precaution.
-			</p>
-			<br/><br/>
-		</div>	
-	</div>
-</div>
-
-<br/><br/>
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph4																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div id="paragraph4_title" class="container reveal_top">
-		<h3> Understanding the Data: Overall information about Categories </h3>
-	</div>
-
-	<div id="boxshadow" style="background-color:whitesmoke;">	
-		<div class="container reveal_left">
-			<br/>
-			<p align="right">
-				<b>Top 10 Largest Categories</b>
-				<br>
-				<div id="boxshadow">
-					<img src="./images/ImageTopCategory.JPG" />					
-				</div>
-				<p class="smallText">
-					Distribution of Products by Categories, generated with Seaborn from jupyter Notebook.
-				</p>
-			</p>
-			<br/>
-		</div>
-		
-		<div class="container reveal_right">		
-			<br/>
-			<div id="boxshadow">
-				<table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
-					<tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Categories</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
-					<tr><td>Plant-based foods and beverages</td><td align="right">37'312</td><td align="right">5.474162%</tr>
-					<tr style="background-color:whitesmoke"><td>Beverages</td><td align="right">25'368</td><td align="right">3.721820%</tr>
-					<tr><td>Sugary snacks</td><td align="right">23'588</td><td align="right">3.460671%</tr>
-					<tr style="background-color:whitesmoke"><td>Dairies</td><td align="right">15'580</td><td align="right">2.285791%</tr>
-					<tr><td>Meats</td><td align="right">9'589</td><td align="right">1.406833%</tr>
-					<tr style="background-color:whitesmoke"><td>Groceries</td><td align="right">9'390</td><td align="right">1.377637%</tr>
-					<tr><td>Meats</td><td align="right">7'669</td><td align="right">1.125143%</tr>
-					<tr style="background-color:whitesmoke"><td>Spreads</td><td align="right">4'355</td><td align="right">0.638936%</tr>
-					<tr><td>Frozen foods</td><td align="right">3'093</td><td align="right">0.453784%</tr>
-					<tr style="background-color:whitesmoke"><td>Fruit juices</td><td align="right">3'065</td><td align="right">0.449676%</tr>			
-				</table>					
-			</div>
-			<p class="smallText">
-				173'722 records have Categories, 507'880 records do not have any Category (74%)
-			</p>
-			
-			<br/>
-		</div>	
-		
-		
-		
-		<div class="container reveal_left">
-			<p>
-				It seems that <b>74% of the Products</b>(507'880) does not have any 'category'. Furthermore the first and second categories contain both 'Beverages'.
-			</p>
-			<p>
-				So far we can conclude that this field 'category' has to be used with precaution.
-			</p>
-			<br/><br/>
-		</div>	
-	</div>
-</div>
+            <br/><br/>
 
 
-<br/><br/>
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph2 																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph2_title" class="container reveal_top">
+                    <h3> Understanding the Data: Overall information about Brands </h3>
+                </div>
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- End Navigation																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-	<div align="center">    
-		<table style="width:90%;max-width:1200px; min-width: 400px;" >
-			<tr>
-				<td align="left">
-					<a href="./index.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right "><img src="./images/moveBack.png" width="40px"></img>Move back to Home</a>
-				</td>
-				<td align="right">
-					<a href="./DataCleaning.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right ">Move next to Data Cleaning<img src="./images/moveNext.png" width="40px"></img></a>
-				</td>
-			</tr>
-		</table>
-	</div>
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="right">
+                        <b>Top 10 Brands</b>
+                        <br/>				
+                        <div id="boxshadow">
+                            <img id="imgTopBrand" src="./images/ImageTopBrands.JPG" />										
+                        </div>
+                        <p class="smallText">
+                        Distribution of Products by Brand, generated with Seaborn from jupyter Notebook.
+                        </p>
+
+                        </p>
+                        <br/>
+                    </div>
+
+
+                    <div class="container reveal_right">				
+                        <br/>
+
+                        <div id="boxshadow">				
+                            <table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
+                                <tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Brands</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
+                                <tr><td>Carrefour</td><td align="right">5'384</td><td align="right">0.789904%</tr>
+                                <tr style="background-color:whitesmoke"><td>Auchan</td><td align="right">5'313</td><td align="right">0.779487%</tr>
+                                <tr><td>U</td><td align="right">4'401</td><td align="right">0.645685%</tr>
+                                <tr style="background-color:whitesmoke"><td>Casino</td><td align="right">3'130</td><td align="right">0.459212%</tr>
+                                <tr><td>Leader Price</td><td align="right">2'825</td><td align="right">0.414465%</tr>
+                                <tr style="background-color:whitesmoke"><td>Cora</td><td align="right">2'230</td><td align="right">0.327170%</tr>
+                                <tr><td>Meijer</td><td align="right">1'997</td><td align="right">0.292986%</tr>
+                                <tr style="background-color:whitesmoke"><td>Kroger</td><td align="right">1'673</td><td align="right">0.245451%</tr>
+                                <tr><td>Picard</td><td align="right">1'517</td><td align="right">0.222564%</tr>
+                                <tr style="background-color:whitesmoke"><td>Ahold</td><td align="right">1'370</td><td align="right">0.200997%</tr>			
+                            </table>
+                        </div>			
+                        <p class="smallText">
+                        There is a total of 681'602 records, and 2'211'773 of them are empty (32.44958%)
+                        </p>			
+                    </div>
+
+                    <br>
+
+                    <div class="container reveal_left">
+                        <p>
+                        <b>32% of the products</b> are not assigned to any Brands. Furthermore the 6 biggest brands of Open Food Facts were all French malls. It sounds strange that majority of all the products are reported from France.
+                        Maybe the popularity of French cheese, like Product Code <a title="Fromage Reflets de France" href="https://world.openfoodfacts.org/product/3245390058782/petit-munster-gerome-reflets-de-france" target="_blank"><b>'3245390058782' Petit Munster Géromé</b></a>, is the reason behind the difference? Could this be an avenue for analysis!?
+                        </p>
+                        <br/>
+                    </div>	
 
 
 
-	        
+                    <div class="container reveal_right">				
+                        <br/>
 
-    <div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
-       
+                        <div id="boxshadow">				
+                            <a title="Fromagerie chez moi" href="http://goatcheesesoffrance.com/" target="_blank">
+                                <img src="./images/french-chevre-regions-2.png"  style="border:None;" />											
+                            </a>				
+                        </div>			
+                        <p class="smallText">
+                        List of French Cheese, by <a href="http://goatcheesesoffrance.com/the-cheeses/#chevre-regions" title="goatcheeseoffrance">http://goatcheesesoffrance.com/the-cheeses/#chevre-regions</a>
+                        </p>
+                        <br>
+                        <p>
+                        It's true that there is a lot of cheese in France and that some of them are really famous , as illustred above or in <a href="https://en.wikipedia.org/wiki/List_of_cheeses#France" target="_blank"><b>Wikipedia</b></a> !
 
-</div>
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- FOOTER		 																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<footer>
-	<p><a href="https://www.linkedin.com/in/steverey/" target="_blank" title="LinkedIn Steve Rey">steve.rey@epfl.ch</a></p>
-	<p><a href="https://www.linkedin.com/in/evgeniy-samosenok-83261a1b/" target="_blank" title="LinkedIn Yauheni Samasionak">yauheni.samasionak@epfl.ch</a></p>
-	<p><a href="https://people.epfl.ch/victor.wiklund" target="_blank" title="EPFL Victor Wiklund">victor.wiklund@epfl.ch</a></p> 
-</footer>
-
-
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Script Scroll																											-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<script>
-    // JavaScript
-    window.sr = ScrollReveal();
-    sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
-    sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
-    sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
-</script>
+                        <br><br>
+                        There is unlikely no correlation with cheese and the number of French Products. The number of French Products could be most likely explained by the fact that the biggest contributor is a French Agency, called Kiliweb.
+                        This may explain why there are so many products attributed to French Brands and France.
 
 
+                        </p>
+                    </div>
 
-</body>
+                    <br><br>
+                </div>
+            </div>
+
+            <br/><br/>
+
+
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph3																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph3_title" class="container reveal_top">
+                    <h3> Understanding the Data: Overall information about Countries </h3>
+                </div>
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="right">
+                        <b>Top 10 Largest Countries</b>
+                        <br>
+                        <div id="boxshadow">
+                            <img src="./images/ImageTopCountries.JPG" />					
+                        </div>
+                        <p class="smallText">
+                        Distribution of Products by Country, generated by Seaborn from jupyter Notebook.
+                        </p>
+
+                        </p>
+                        <br/>
+                    </div>
+
+                    <div class="container reveal_right">
+
+                        <br/>
+                        <div id="boxshadow">
+                            <table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
+                                <tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Countries</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
+                                <tr><td>France</td><td align="right">409'951</td><td align="right">60.145217%</tr>
+                                <tr style="background-color:whitesmoke"><td>United States</td><td align="right">173'494</td><td align="right">25.453857%</tr>
+                                <tr><td>Switzerland</td><td align="right">13'543</td><td align="right">1.986937%</tr>
+                                <tr style="background-color:whitesmoke"><td>Germany</td><td align="right">11'629</td><td align="right">1.706128%</tr>
+                                <tr><td>Spain</td><td align="right">6'104</td><td align="right">0.895537%</tr>
+                                <tr style="background-color:whitesmoke"><td>France, Germany</td><td align="right">5'884</td><td align="right">0.863260%</tr>
+                                <tr><td>United Kingdom</td><td align="right">5'643</td><td align="right">0.827903%</tr>
+                                <tr style="background-color:whitesmoke"><td>Belgium</td><td align="right">5'309</td><td align="right">0.778900%</tr>
+                                <tr><td>France, Switzerland</td><td align="right">4'345</td><td align="right">0.637469%</tr>
+                                <tr style="background-color:whitesmoke"><td>Belgium, France</td><td align="right">3'505</td><td align="right">0.514230%</tr>			
+                            </table>					
+                        </div>
+                        <p class="smallText">
+                        681'058 records have Countries, 544 records do not have any country (0.07%)
+                        </p>
+
+                        <br/>
+                    </div>	
+
+                    <div class="container reveal_left">
+                        <p>
+                        Explicitly looking at country instead of brand we see the same behaviour as in the previous analysis. Most of the products are attributed to France which falls in line with the main contributor being kiliweb, a France Web Agency, and the most popular brands analysed above.
+                        </p>
+                        <p>
+                        Even if most of the products have been assigned to country, as only <b>544 products</b> are not linked to any country, we discover that there is 1361 countries.
+                        </p>
+                        <p>
+                        So far it seems that countries contain a list of countries and not unique countries.
+                        </p>
+                        <p>
+                        Furthermore most of the products are linked to one or two countries ONLY, which is very suspicious.
+                        </p>
+                        <p>
+                        <table><tr><td>
+                                    <a href="http://world-en.openfoodfacts.org/product/0011110739322/peanut-butter-creamy" target="_blank" title="Peanut Butter">
+                                        <img class="picture" src="./images/PeanutButter.jpg"/>
+                                    </a>
+                                </td>
+                                <td>
+                                    We could assume per example that this <a href="http://world-en.openfoodfacts.org/product/0011110739322/peanut-butter-creamy" target="_blank" title="Peanut Butter"><b>Peanut Butter</b></a>  assigned to France could be founded in another country like USA as it is made by <a href="https://fr.wikipedia.org/wiki/Kroger" title="Kroger" target="_blank"><b>Kroger</b></a>.
+                                    <br><br>
+                                    Most probably this product, which is being sold in France, had been repertoried as French's product by a French Contributor.
+                                    But we could be sure that this peanut butter is sold in USA too, maybe in a different product's name.
+                                </td>
+                            </tr></table>
+                        </p>
+                        <br>
+
+                        <br/><br/>
+                    </div>	
+
+
+
+                </div>
+            </div>
+
+            <br/><br/>
+
+
+
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph4																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph4_title" class="container reveal_top">
+                    <h3> Understanding the Data: Distribution of Products by Countries</h3>
+                </div>
+
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="right">
+                        <b>Distribution of Products by Country</b>
+                        <br>
+                        <div id="boxshadow">
+                            <img src="./images/DE_Country.jpg" />					
+                        </div>
+                        <p class="smallText">
+                        Distribution of Products by Country, generated with Folium from jupyter Notebook.
+                        </p>
+
+                        </p>
+                        <br/>
+                    </div>
+
+                    <div class="container reveal_right">
+                        <p>
+                        Even if the Country information isn't well structured, we proceeded with some cleaning activities.
+                        </p>
+                        <p>
+                        For this purpose, we tried to create a Country Map with folium, and performed following actions:
+                        <ul>
+                            <li>Load a files containing a list of countries and ISO Three Letter Code</li>
+                            <li>Clean/Parse the country Name from openFoodFacts</li>
+                            <li>Map the normalized country with a proper Country's Name</li>
+                            <li>Show a folium Map and map the value through iso 3 Letter Codes and retrieve the percentage accordingly</li>
+                        </ul>
+                        </p>
+                        <br>
+                        <p>
+                        It's clear, by looking on the map, that data for only few countries have been submitted. Based of this, we can say that most of the products are assigned to
+                        <ul>
+                            <li>France with 409'951 products (~60%)</li>
+                            <li>United States of America with 174'494 products (~25%)</li>
+                            <li>Switzerland with 13'543 products (~1.98%)</li>
+                            <li>Germany with 11'629 products (~1.70%)</li>
+                            <li>All others Countries have less than 1% each of representativity</li>
+                        </ul>
+                        </p>
+                        <p>
+                        So far we can conclude that this field 'country' has to be used with precaution.
+                        </p>
+                        <br/><br/>
+                    </div>	
+                </div>
+            </div>
+
+            <br/><br/>
+
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph4																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph4_title" class="container reveal_top">
+                    <h3> Understanding the Data: Overall information about Categories </h3>
+                </div>
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="right">
+                        <b>Top 10 Largest Categories</b>
+                        <br>
+                        <div id="boxshadow">
+                            <img src="./images/ImageTopCategory.JPG" />					
+                        </div>
+                        <p class="smallText">
+                        Distribution of Products by Categories, generated with Seaborn from jupyter Notebook.
+                        </p>
+                        </p>
+                        <br/>
+                    </div>
+
+                    <div class="container reveal_right">		
+                        <br/>
+                        <div id="boxshadow">
+                            <table style="padding:4px 4px 4px 4px; border:4px none;width:100%">
+                                <tr style="border:0px solid;background-color:#333;color:white;height:40px;"><td><b>Categories</b></td><td align="right"><b>counts</b></td><td align="right"><b>percentage</b></tr>
+                                <tr><td>Plant-based foods and beverages</td><td align="right">37'312</td><td align="right">5.474162%</tr>
+                                <tr style="background-color:whitesmoke"><td>Beverages</td><td align="right">25'368</td><td align="right">3.721820%</tr>
+                                <tr><td>Sugary snacks</td><td align="right">23'588</td><td align="right">3.460671%</tr>
+                                <tr style="background-color:whitesmoke"><td>Dairies</td><td align="right">15'580</td><td align="right">2.285791%</tr>
+                                <tr><td>Meats</td><td align="right">9'589</td><td align="right">1.406833%</tr>
+                                <tr style="background-color:whitesmoke"><td>Groceries</td><td align="right">9'390</td><td align="right">1.377637%</tr>
+                                <tr><td>Meats</td><td align="right">7'669</td><td align="right">1.125143%</tr>
+                                <tr style="background-color:whitesmoke"><td>Spreads</td><td align="right">4'355</td><td align="right">0.638936%</tr>
+                                <tr><td>Frozen foods</td><td align="right">3'093</td><td align="right">0.453784%</tr>
+                                <tr style="background-color:whitesmoke"><td>Fruit juices</td><td align="right">3'065</td><td align="right">0.449676%</tr>			
+                            </table>					
+                        </div>
+                        <p class="smallText">
+                        173'722 records have Categories, 507'880 records do not have any Category (74%)
+                        </p>
+
+                        <br/>
+                    </div>	
+
+
+
+                    <div class="container reveal_left">
+                        <p>
+                        It seems that <b>74% of the Products</b>(507'880) does not have any 'category'. Furthermore the first and second categories both contain 'Beverages'.
+                        </p>
+                        <p>
+                        So far we can conclude that this field 'category' has to be used with precaution.
+                        </p>
+                        <br/><br/>
+                    </div>	
+                </div>
+            </div>
+
+
+            <br/><br/>
+
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- End Navigation																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div align="center">    
+                <table style="width:90%;max-width:1200px; min-width: 400px;" >
+                    <tr>
+                        <td align="left">
+                            <a href="./index.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right "><img src="./images/moveBack.png" width="40px"></img>Move back to Home</a>
+                        </td>
+                        <td align="right">
+                            <a href="./DataCleaning.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right ">Move next to Data Cleaning<img src="./images/moveNext.png" width="40px"></img></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+
+            <div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
+
+
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- FOOTER		 																									-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <footer>
+            <p><a href="https://www.linkedin.com/in/steverey/" target="_blank" title="LinkedIn Steve Rey">steve.rey@epfl.ch</a></p>
+            <p><a href="https://www.linkedin.com/in/evgeniy-samosenok-83261a1b/" target="_blank" title="LinkedIn Yauheni Samasionak">yauheni.samasionak@epfl.ch</a></p>
+            <p><a href="https://people.epfl.ch/victor.wiklund" target="_blank" title="EPFL Victor Wiklund">victor.wiklund@epfl.ch</a></p> 
+        </footer>
+
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- Script Scroll																											-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <script>
+            // JavaScript
+            window.sr = ScrollReveal();
+sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
+sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
+sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
+        </script>
+
+
+
+    </body>
 </html>
