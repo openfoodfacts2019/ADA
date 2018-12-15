@@ -1,633 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>cs_team_beta_hw2: Open Food Facts</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	  
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
-  	<link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
-  	<link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
+    <head>
+        <title>cs_team_beta_hw2: Open Food Facts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-	<script src="./jquery.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-    <script src="./js/scrollreveal.min.js"></script>
-    <script type="text/javascript" src="./js/d3.min.js"></script>
-	<script>
-		(function() {
-			var config = {
-				viewFactor: 0.08,
-				duration: 800,
-				reset: true,
-			}
-			window.sr = new ScrollReveal(config)
-		})()
-		</script>
-</head>
-<body>
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
+        <link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
+        <link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
 
-
-<!------------------------------------------------------------------------>  
-<!-- Header																-->
-<!------------------------------------------------------------------------>  
-<div class="header" style="background-image:url(./images/left.jpg);background-position: left top; background-repeat: no-repeat">
-	<h1>Eeat less sugar,<br>you're sweet enough already</h1>
-	<p style="font-size:9px;color:gray">cs_team_beta_hw2 - Automn 2018</p>
-	<p>
-		<a href="https://world.openfoodfacts.org/data" target="_blank">
-			<img alt="Open Food Facts" src="./images/openfoodfacts-logo-en-178x150.png" srcset="./images/openfoodfacts-logo-en-178x150.png" width="150px"/>
-		</a>		
-	</p>
-</div>
+        <script src="./jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/scrollreveal.min.js"></script>
+        <script type="text/javascript" src="./js/d3.min.js"></script>
+        <script>
+            (function() {
+                var config = {
+                    viewFactor: 0.08,
+                    duration: 800,
+                    reset: true,
+                }
+                window.sr = new ScrollReveal(config)
+            })()
+        </script>
+    </head>
+    <body>
 
 
-<!------------------------------------------------------------------------>  
-<!-- MENU 																-->
-<!------------------------------------------------------------------------>  
-<div class="topnav" style="vertical-align: middle;" > 
-		<table align="center"><tr>
-			<td><a href="./index.html">Home</a></td>
-			<td><a href="./DataExploration.html">Data Exploration</a></td>
-			<td><a href="./DataCleaning.html" class="topselected"><div class="selected">Data Cleaning</div></a></td>
-			<td><a href="./DataAnalysis.html">Data Analysis</a></td>
-			<td><a href="./DataGame.html">Data Game</a></td>
-	</tr></table>
-</div>
-	
-
-  
-<!------------------------------------------------------------------------>  
-<!-- Top Text  															-->
-<!------------------------------------------------------------------------>    
-<div class="container">
+        <!------------------------------------------------------------------------>  
+        <!-- Header																-->
+        <!------------------------------------------------------------------------>  
+        <div class="header" style="background-image:url(./images/left.jpg);background-position: left top; background-repeat: no-repeat">
+            <h1>Eeat less sugar,<br>you're sweet enough already</h1>
+            <p style="font-size:9px;color:gray">cs_team_beta_hw2 - Automn 2018</p>
+            <p>
+            <a href="https://world.openfoodfacts.org/data" target="_blank">
+                <img alt="Open Food Facts" src="./images/openfoodfacts-logo-en-178x150.png" srcset="./images/openfoodfacts-logo-en-178x150.png" width="150px"/>
+            </a>		
+            </p>
+        </div>
 
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph1 																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-	<div class="row">
-		<div id="paragraph1_title">
-			<h3>#Data Cleaning</h3>
-		</div>
-
-		<div >	
-			<p>
-			So far, we clean the data in order to ensure to have usable dimension, like Product's Name, Category 1 and Category 2 (Denormalization of Main Category) and Brand.
-			</p>
-			<p>
-				Furthermore, we enrich the data with Brand/Company information and with "Piece of Sugars". For this one, we added the calculated fields sugars_per_serving and sugars_per_product, which have been calculated from quantity (which requires some type conversion, like kg to mg).				
-			</p>
-		</div>
-	</div>
-
-	<br><br>
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph x																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-	<div class="row">
-		<div id="paragraph6_title" class="container reveal_top">
-			<h3>Clean the Data: Product's Name</h3>
-		</div>
-	
-		<div id="boxshadow" style="background-color:whitesmoke;">	
-			<div class="container reveal_left">
-				<br>
-				<p align="right">
-					<b>Product's Name</b><br>				
-					<div id="boxshadow">
-						<img src="./images/DC_Product.jpg" />					
-					</div>
-				</p>	
-				<p>					
-				</p>
-			</div>
-			
-			<div class="container reveal_right">
-				<p>
-					To clean the Product Name, below actions have been performed in order to ensure that each Product contain a valid Name:
-					<ul>
-						<li>Remove all Products which do not have any Product_name, categories_en and a brands_tags</li>
-						<li>Replace empty Product's Name by their corresponding Category or Brand</li>
-					</ul>
-				</p>
-			<br><br>
-			</div>	
-		</div>
-	</div>
-	
-		
-	<br><br>
+        <!------------------------------------------------------------------------>  
+        <!-- MENU 																-->
+        <!------------------------------------------------------------------------>  
+        <div class="topnav" style="vertical-align: middle;" > 
+            <table align="center"><tr>
+                    <td><a href="./index.html">Home</a></td>
+                    <td><a href="./DataExploration.html">Data Exploration</a></td>
+                    <td><a href="./DataCleaning.html" class="topselected"><div class="selected">Data Cleaning</div></a></td>
+                    <td><a href="./DataAnalysis.html">Data Analysis</a></td>
+                    <td><a href="./DataGame.html">Data Game</a></td>
+                </tr></table>
+        </div>
 
 
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph x																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-	<div class="row">
-		<div id="paragraph6_title" class="container reveal_top">
-			<h3>Clean the Data: Category</h3>
-		</div>
-	
-		<div id="boxshadow" style="background-color:whitesmoke;">	
-			<div class="container reveal_left">
-				<br>
-				<p align="right">
-					<b>Category</b><br>				
-					<div id="boxshadow">
-						<img src="./images/DC_Category.jpg" />					
-					</div>
-				</p>	
-				<p>					
-				</p>
-			</div>
-			
-			<div class="container reveal_right">
-				<p>
-						Create two generic categories (category_1: for Category of level 1 and Category_2: for Category of level 2)
-
-						As there are many products without category, or categories which only contains few products, we decided to:
-						<ul>
-							<li>Assign all orphan products to a category called 'Undefined'</li>
-							<li>Assgin all products to category_1 and category_2 (based of the columns categories_en)</li>
-							<li>Assign all products, belonging to category having less than 10 products, to a category called 'Others'</li>
-						</ul>
-						
-					<br>
-						Unfortunately, as described in the "Data Exploration" most of the Products do not contain any Category and are therefore mapped to 'undefined'.
-
-						
-				</p>
-
-			<br><br>
-			</div>	
-		</div>
-	</div>
-	
-		
-	<br><br>
+        <!------------------------------------------------------------------------>  
+        <!-- Top Text  															-->
+        <!------------------------------------------------------------------------>    
+        <div class="container">
 
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph x																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph1 																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph1_title">
+                    <h3>#Data Cleaning</h3>
+                </div>
 
-<div class="row">
-	<div id="paragraph6_title" class="container reveal_top">
-		<h3>Enrich the Data: Brands & Companies </h3>
-	</div>
+                <div >	
+                    <p>
+                    In this section we clean the data in order to obtain useful dimensions such as Producer, Category 1 and Category 2 (Denormalization of Main Category) and Brand.
+                    </p>
+                    <p>
+                    Furthermore, we enrich the data with Brand/Company information and with "Piece of Sugars". For this one, we added the calculated fields sugars_per_serving and sugars_per_product, which have been calculated from quantity (which requires some type conversion, like kg to mg).				
+                    </p>
+                </div>
+            </div>
 
-	<div id="boxshadow" style="background-color:whitesmoke;">	
-		<div class="container reveal_left">
-			<br>
-			<p align="right">
-				<b>All Brands per Company</b><br>				
-				<div id="boxshadow">
-					<img src="./images/AllBrands.jpg" />					
-				</div>
-			</p>	
-			<p>
-				Furthermore, we tried to regroup Brands logically, as main of them are owned by the same Company. So we decided to enrich the data with Company And Brands by following informations from the schema above:
-			</p>
-		</div>
-		
-		<div class="container reveal_right">
-			<p>
-				To get those infromation, we implemented, with beautiful soup an interface to Wikipedia:
-				<ul>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Nestlé_brands">https://en.wikipedia.org/wiki/Category:Nestlé_brands</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands">https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands">https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/List_of_Unilever_brands">https://en.wikipedia.org/wiki/List_of_Unilever_brands</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Mars_brands">https://en.wikipedia.org/wiki/Category:Mars_brands</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands">https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands</a></li>
-					<li><a target="_blank" href="https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo">https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Coca-Cola_brands">https://en.wikipedia.org/wiki/Category:Coca-Cola_brands</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands">https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands</a></li>
-					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands">https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands</a></li>
-				</ul>
-			
-				<br>
-				This may let the possibility to compare products per company or per brand. As shown in the analysis above, tha data quality of OpenFoodFacts is not having the expected quality. Maybe are we reaching here the limitation of an open community ? Even if we are able to retrieve all those brands from wikipedia, we are not sure to be able to join them with the one from OpenFoodFact.
+            <br><br>
 
-			</p>
-		<br><br>
-		</div>
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph x																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph6_title" class="container reveal_top">
+                    <h3>Clean the Data: Product's Name</h3>
+                </div>
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br>
+                        <p align="right">
+                        <b>Product's Name</b><br>				
+                        <div id="boxshadow">
+                            <img src="./images/DC_Product.jpg" />					
+                        </div>
+                        </p>	
+                        <p>					
+                        </p>
+                    </div>
+
+                    <div class="container reveal_right">
+                        <p>
+                        To clean the Product Name, below actions have been performed in order to ensure that each Product contain a valid Name:
+                        <ul>
+                            <li>Remove all Products which do not have any Product_name, categories_en and a brands_tags</li>
+                            <li>Replace empty Product's Name by their corresponding Category or Brand</li>
+                        </ul>
+                        </p>
+                        <br><br>
+                    </div>	
+                </div>
+            </div>
 
 
-		<div class="container reveal_left">
-			<br/>
-			<p align="left">
-				<b>Kraft Foods Network</b>
-				
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands"><b><i>https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands</i></b></a>
-				</p>			
-				
-				<br/>
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_KraftFood.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Kraft Foods: List of Brands</b><br>
-							a.1. sauce, balance bar, boca burger, bonox, bull's-eye barbecue sauce, calumet baking powder company, capri sun, cheez whiz, chiffon margarine, claussen pickles, cool whip, country time, crystal light, dairylea (cheese), easy cheese, frusen glädjé, general foods, general foods international, grey poupon, jell-o, jet-puffed marshmallows, koogle, kool-aid, kraft dinner, template:kraft foods group, kraft mayo, kraft singles, lunchables, maxwell house, mio, miracle whip, nabob (coffee), oscar mayer, mr. peanut, planter nut & chocolate co., planters, polly-o, pop rocks, rastus, ritz metro, sanka, shake 'n bake, stove top stuffing, vegemite, velveeta, vigroids.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		
-		
-		<div class="container reveal_right">
-			<br/>
-			<p align="left">
-				<b>Wrigley Network</b>
-				
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands">https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands</a>
-				</p>			
-
-				<br/>
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_Wrigley.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Wrigley: List of Brands</b><br>
-							airwaves (gum), alert (gum), altoids, big league chew, big red (gum), bubble tape, doublemint, eclipse (breath freshener), excel (gum), extra (gum), freedent, hubba bubba, juicy fruit, life savers, lockets, orbit (gum), ouch! (gum), skittles (confectionery), starburst (confectionery), surpass, tunes (confectionery), winterfresh, wrigley's spearmint.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		
-		<div class="container reveal_left">
-			<br/>
-			<p align="left">
-				<b>Coca-Cola Network</b>
-				
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Coca-Cola_brands">https://en.wikipedia.org/wiki/Category:Coca-Cola_brands</a>
-				</p>			
-								
-				<br/>
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_CocaCola.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Coca-Cola: List of Brands</b><br>
-							ades, ambasa, ameyal, amita (fruit juice), apollinaris (water), appletiser, aquarius (sports drink), arwa (water), ayataka, barq's, beat (drink), beverly (drink), bibo, caffeine-free coca-cola, cannings foods limited, cappy (juice), carbonated soda treatment of phytobezoars, ciel (beverage), citra (drink), coca-cola, coca-cola black cherry vanilla, coca-cola blāk, coca-cola c2, coca-cola cherry, coca-cola citra, coca-cola clear, coca-cola life, coca-cola light sango, coca-cola orange, coca-cola raspberry, coca-cola vanilla, coca-cola with lemon, coca-cola with lime, coca-cola zero sugar, dasani, deep river rock, delaware punch, diet coke, diet coke lime, diet coke plus, diet coke with citrus zest, diet inca kola, energy brands, enviga, fairlife, fanta, fanta citrus, far coast, fioravanti (soft drink), five alive, fresca, frescolita, frisco (drink), fruitopia, fruktime, frutonic, full throttle (drink), fuze beverage, georgia (coffee), glaceau smartwater, gladiator (energy drink), gold peak tea, gold spot, golden coca-cola, guaraná jesus, hi-c, hit (drink), honest tea, inca kola, innocent drinks, iron brew (south african soft drink), joya (drink), jugos del valle, kia-ora, kinley, kola inglesa, krest, kuat (drink), leed (drink), lemon & paeroa, lift (soft drink), lilt, limca, live+, maaza, malvern water (bottled water), mare rosso, matte leão, mello yello, mexican coke, mezzo mix, minute maid, mother (drink), nalu (drink), nativa, nestea, new coke, nordic mist, oasis (drink), odwalla, ok soda, pemberton's french wine coca, pibb xtra, powerade, qoo, quatro (beverage), quwat jabal, rac 124, ramblin' root beer, rani juice, red flash, relentless (drink), rimzim, royal tru, santiba, sarsi (drink), senzao, simply orange juice company, smart (drink), sokenbicha, sparkle (drink), sparletta, spring! (brand), sprite (soft drink), sprite ice, sprite remix, sprite zero, stoney (drink), sunfill, surge (drink), swerve (drink), tab (drink), tab clear, tab energy, tanora, thums up, tiky, tum-e yummies, urge (drink), valpre, vault (drink), vegitabeta, victoria (soda), vio (drink), yoli.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		
-		<div class="container reveal_right">
-			<br/>
-			<p align="left">
-				<b>Pepsi-co Network</b>
-				<br/>
-
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo">https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo</a>
-				</p>			
-				
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_PepsiCo.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Pepsi-co: List of Brands</b><br>
-							aquafina, bénénuts, doritos, frito-lay, gatorade, kas (limonade), lay's, mirinda, mountain dew (marque de boisson), mug root beer, pepsi, quaker oats company, ruffles, tropicana.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		
-		<div class="container reveal_left">
-			<br/>
-			<p align="left">
-				<b>Kellogs Network</b>
-				<br/>
-				
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands">https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands</a>
-				</p>
-				
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_Kellogs.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Kellogs: List of Brands</b><br>
-							bear naked, eggo, kashi, keebler, gardenburger, morningstar farms, nutri-grain, sunshine biscuits, all-bran, apple jacks, bran buds, coco pops/cocoa krispies, corn flakes, corn pops, complete wheat bran flakes, country store, crispix, cruncheroos, crunchy nut, froot loops, frosted flakes/frosties, frosted mini-wheats, fruit 'n fibre, honey loops, honey smacks, just right, krave, mini swirlz, nutri-grain, cracklin' oat bran, raisin bran, raisin wheats, rice krispies, smorz, special k, start, carr's, cheez-it, chips deluxe, club crackers, e.l. fudge cookies, famous amos, mother's cookies, vienna fingers, wheatables.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		
-		<div class="container reveal_right">
-			<br/>
-			<p align="left">
-				<b>Mars Network</b>
-			
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Mars_brands">https://en.wikipedia.org/wiki/Category:Mars_brands</a>
-				</p>
-							
-				<br/>
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_Mars.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Mars: List of Brands</b><br>
-							altoids, cocoavia, combos, cookies &, corn quistos, dolmio, dove bar, ethel m chocolate factory, eukanuba, flavia beverage systems, iams, mars nederland, milky way (spread), milky way (chocolate bar), nutro products, oxo (food), pedigree petfoods, promite, royal canin, seeds of change, sheba (cat food), spillers, uncle ben's, whiskas, whistle (company).
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		<div class="container reveal_left">
-			<br/>
-			<p align="left">
-				<b>Unilever Network</b>
-
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_Unilever_brands">https://en.wikipedia.org/wiki/List_of_Unilever_brands</a>
-				</p>
-
-				<br/>
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_Unilever.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Unilever: List of Brands</b><br>
-							ben & jerry's, best foods, bovril, breyers, brooke bond, instant coffee, brummel & brown, buavita, bushell's, chicken tonight, colman's, conimex, continental, fudgsicle, grom, heartbrand, hellmann's, jif, soya sauce, klondike, knorr, lao cai, lipton, lipton ice tea, lizano sauce, maille, maizena, marmite, mãe terra, peru, paddle pop, pfanni, pg tips, popsicle, pot noodle, pukka, red rose tea, sariwangi, scottish blend, sealtest, streets, talenti, turun sinappi, unox, weis.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		<div class="container reveal_right">
-			<br/>
-			<p align="left">
-				<b>Johnson Network</b>
-
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands">https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands</a>
-				</p>
-
-				<br/>
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_Johnson.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Johnson: List of Brands</b><br>
-							aciphex, actifed, acuvue, arestin, aveeno, axert, band-aid, benadryl, bengay, benylin, clean & clear, codral, comfyde, complera, cortef, dacogen, darzalex, ditropan, edurant, flexeril, floxin, haldol, helioplex, imodium, inadine, incivek, intelence, invega, invega, invokana, ionsys, johnson's baby, jurnista, lactaid, leustatin, levaquin, levoquin, listerine, lubriderm, micatin, motilium, motrin, mylanta, natrecor, neosporin, neutrogena, nicorette, nizoral, nucynta, olysio, onetouch ultra, ortho tri-cyclen, penaten, pepcid, prezista, priligy, procrit, reach (brand), reactine, regaine, rembrandt toothpaste, remicade, reopro, resolor, ribomustin, risperdal, rolaids, simponi, sinutab, sirturo, spectazole, splenda, sporanox, stelara, topamax, tylenol (brand), tylenol pm, ultram, velcade, vermox, visine, xarelto, xeplion, yondelis, zarnestra, zeftera, zevtera, zytiga.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		<div class="container reveal_left">
-			<br/>
-			<p align="left">
-				<b>Procter & Gamble Network</b>
-				
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands">https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands</a>
-				</p>
-
-				<br/>
-				<table>
-					<tr>
-						<td width="40%"><div id="boxshadow">
-								<img  src="./images/DA_ProcterGamble.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Procter & Gamble: List of Brands</b><br>
-							always (brand), ambi pur, ariel (detergent), the art of shaving, aussie (shampoo), bold (detergent), bounty (brand), braun (company), charmin, cheer (brand), citrus hill, clairol, covergirl, crest (toothpaste), crest whitestrips, dawn (brand), daz (detergent), downy, dreft, eukanuba, fairy (brand), febreze, gain (detergent), gillette, gillette mach3, head & shoulders, herbal essences, iams, ivory (soap), joy (dishwashing liquid), luvs, magic eraser, max factor, melamine foam, mr. clean, nice 'n easy (hair coloring), noxell, olay, old spice, oral-b, oral-b glide, pampers, pantene, puffs (facial tissue), rembrandt toothpaste, rochas, vidal sassoon, scope (mouthwash), secret (deodorant brand), sk-ii, swash (brand), swiffer, tampax, tide (brand), wella.
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-		<div class="container reveal_right">
-			<br/>
-			<p align="left">
-				<b>Nestlé Network</b>
-				
-				<p class="smallText">
-					Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
-					Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Nestlé_brands">https://en.wikipedia.org/wiki/Category:Nestlé_brands</a>
-				</p>
-
-				<br/>
-				<table>
-					<tr>
-						<td width="40%">
-							<div id="boxshadow">
-								<img  src="./images/DA_Nestle.jpg" />					
-							</div
-						</td>
-						<td width="5%">
-						</td>
-						<td width="55%">
-							<b>Nestlé: List of Brands</b><br>
-							abuelita, aero (chocolate), aero biscuits, after eight, alpo (pet food), arrowhead water, baby ruth, beggin' strips, beneful, bertie beetle, big turk, black magic (chocolates), blue bottle coffee, blue riband (biscuits), bonio, breakaway (biscuit), buitoni, butterfinger, cailler, carlos v (chocolate bar), carnation (brand), caro (drink), cereal partners worldwide, chicos (candy), chocolate surpresa, chocolate-covered raisin, chokito, nestlé chunky, ciego montero, coffee crisp, coffee-mate, coffeemate, contrex, creamola foam, crisp (chocolate bar), deer park spring water, digiorno, dog chow, dolce gusto, dreyer's, drumstick (frozen dairy dessert), enviga, eskimo pie, fancy feast, felix (pet food), fox's confectionery, friskies, frosty paws, gerber life insurance company, gerber products company, häagen-dazs, hjem-is, hot pockets, ice mountain (water), ice screamers, juicy juice, kit kat, kit kats in japan, klim (nestlé), la lechera, lean cuisine, lion bar, lion cereal, mackintosh's, mackintosh's toffee, maggi, maggi noodles, matchmakers, maverick (chocolate), maxibon, milkybar, milo (chocolate bar), milo (drink), mirage (chocolate), mjb (coffee), mövenpick ice cream, nerds (candy), nescafé, nescau, nespresso, nesquik, nestea, nestegg, nestlé bear brand, nestlé crunch, nestlé milk chocolate, nestlé pure life, nestlé purina petcare, nestlé tex, nestlé wagner, nestlé waters north america, nido (brand), nutrament, oh henry!, oompas, ovaltine, ozarka, pamlab, acqua panna, parlour (ice cream), pearson candy company, inc., peppermint crisp, perrier, perugina, poland spring, polly waffle, purina one, ralston purina, redskins (confectionery), reduced cream, ricoré, rolo, rowntree's, s.pellegrino, scorched peanut bar, shredded wheat, sical, sin parar, sjora, sno-caps, sohat, spree (candy), stouffer's, supligen, svitoch, sweet leaf tea company, tender vittles, texan (chocolate bar), thomy, tombstone (pizza), uncle tobys, vice versas, vittel (water), nestlé waters, white knight (chocolate), the willy wonka candy company, winalot, wonder ball, wonka gummies, wonka xploder, yorkie (chocolate bar), zephyrhills (water)
-						</td>
-					</tr>
-				</table>			
-			</p>
-			<br/>
-		</div>
-		
-		
-	</div>
-</div>
+            <br><br>
 
 
 
-<br><br>
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Paragraph x																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph x																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div class="row">
+                <div id="paragraph6_title" class="container reveal_top">
+                    <h3>Clean the Data: Category</h3>
+                </div>
 
-<div class="row">
-	<div id="paragraph6_title" class="container reveal_top">
-		<h3>Enrich the Data: 'Piece of Sugars' per Serving and Product </h3>
-	</div>
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br>
+                        <p align="right">
+                        <b>Category</b><br>				
+                        <div id="boxshadow">
+                            <img src="./images/DC_Category.jpg" />					
+                        </div>
+                        </p>	
+                        <p>					
+                        </p>
+                    </div>
 
-	<div id="boxshadow" style="background-color:whitesmoke;">	
-		<div class="container reveal_left">
-			<br>
-			<p align="right">
-				<b>Pieces of Sugars</b><br>				
-				<div id="boxshadow">
-					<img src="./images/pieceOfSugars.jpg" />					
-				</div>
-			</p>				
-			<p class="smallText">
-				Picture provided by Gilles Mairet — Travail personnel, CC BY-SA 4.0, Lien
-			</p>
-		</div>
-		<br>
-		
-		<div class="container reveal_right">
-			<p>
-				Data have been renriched in order to have for each products the piece of sugars contained in a Serving and in the overall Product.
-			</p>
+                    <div class="container reveal_right">
+                        <p>
+                        Create two generic categories (category_1: for Category of level 1 and Category_2: for Category of level 2)
 
-			<p>
-				To perform that, below functions have been created:
-				<ul>
-					<li><b>Enrich_with_sugars_per_serving</b> which is adding the column sugars_per_serving. </li>
-					<li><b>Enrich_with_sugars_per_product</b> which is adding the column sugars_per_product.</li>
-					<li><b>get_first_nbr_from_str</b> which is extracting the first number from the quantity's field.</li>
-					<li><b>multiply_quantity_if_required</b> which is multiplying by the quantity, as some time a product contains many portions.</li>
-					<li><b>enrich_product_quantity</b> which is counting the quantiy, if required quantity is converted in GRAMMS.</li>
-				</ul>
+                        As there are many products without category, or categories which only contains few products, we decided to:
+                        <ul>
+                            <li>Assign all orphan products to a category called 'Undefined'</li>
+                            <li>Assgin all products to category_1 and category_2 (based of the columns categories_en)</li>
+                            <li>Assign all products, belonging to category having less than 10 products, to a category called 'Others'</li>
+                        </ul>
 
-			</p>
-			<p>
-				Once done, below fields could be used to measure the quantity of Sugars: sugars_100g, sugars_per_serving, sugars_per_product: 
-				<div id="boxshadow">
-					<img src="./images/pieceOfSugarsData.jpg" />					
-				</div>
-
-			</p>
-		<br><br>
-		</div>	
-	</div>
-</div>
+                        <br>
+                        Unfortunately, as described in the "Data Exploration" most of the Products do not contain any Category and are therefore mapped to 'undefined'.
 
 
+                        </p>
 
-<br/><br/>
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- End Navigation																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-	<div align="center">    
-		<table style="width:90%;max-width:1200px; min-width: 400px;" >
-			<tr>
-				<td align="left">
-					<a href="./DataExploration.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right "><img src="./images/moveBack.png" width="40px"></img>Move back to Data Exploration</a>
-				</td>
-				<td align="right">
-					<a href="./DataAnalysis.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right ">Move next to Data Analysis<img src="./images/moveNext.png" width="40px"></img></a>
-				</td>
-			</tr>
-		</table>
-	</div>
+                        <br><br>
+                    </div>	
+                </div>
+            </div>
 
 
-	<div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
-        
-
-</div>
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- FOOTER		 																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<footer>
-	<p><a href="https://www.linkedin.com/in/steverey/" target="_blank" title="LinkedIn Steve Rey">steve.rey@epfl.ch</a></p>
-	<p><a href="https://www.linkedin.com/in/evgeniy-samosenok-83261a1b/" target="_blank" title="LinkedIn Yauheni Samasionak">yauheni.samasionak@epfl.ch</a></p>
-	<p><a href="https://people.epfl.ch/victor.wiklund" target="_blank" title="EPFL Victor Wiklund">victor.wiklund@epfl.ch</a></p> 
-</footer>
+            <br><br>
 
 
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph x																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Script																											-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<script>
-    // JavaScript
-    window.sr = ScrollReveal();
-    sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
-    sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
-    sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
-</script>
+            <div class="row">
+                <div id="paragraph6_title" class="container reveal_top">
+                    <h3>Enrich the Data: Brands & Companies </h3>
+                </div>
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br>
+                        <p align="right">
+                        <b>All Brands per Company</b><br>				
+                        <div id="boxshadow">
+                            <img src="./images/AllBrands.jpg" />					
+                        </div>
+                        </p>	
+                        <p>
+                        Furthermore, we tried to regroup Brands logically, as main of them are owned by the same Company. So we decided to enrich the data with Company And Brands by following informations from the schema above:
+                        </p>
+                    </div>
+
+                    <div class="container reveal_right">
+                        <p>
+                        To get those infromation, we implemented, with beautiful soup an interface to Wikipedia:
+                        <ul>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Nestlé_brands">https://en.wikipedia.org/wiki/Category:Nestlé_brands</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands">https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands">https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/List_of_Unilever_brands">https://en.wikipedia.org/wiki/List_of_Unilever_brands</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Mars_brands">https://en.wikipedia.org/wiki/Category:Mars_brands</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands">https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands</a></li>
+                            <li><a target="_blank" href="https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo">https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Coca-Cola_brands">https://en.wikipedia.org/wiki/Category:Coca-Cola_brands</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands">https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands">https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands</a></li>
+                        </ul>
+
+                        <br>
+                        This may let the possibility to compare products per company or per brand. As shown in the analysis above, tha data quality of OpenFoodFacts is not having the expected quality. Maybe are we reaching here the limitation of an open community ? Even if we are able to retrieve all those brands from wikipedia, we are not sure to be able to join them with the one from OpenFoodFact.
+
+                        </p>
+                        <br><br>
+                    </div>
 
 
-</body>
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="left">
+                        <b>Kraft Foods Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands"><b><i>https://en.wikipedia.org/wiki/Category:Kraft_Foods_brands</i></b></a>
+                        </p>			
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_KraftFood.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Kraft Foods: List of Brands</b><br>
+                                    a.1. sauce, balance bar, boca burger, bonox, bull's-eye barbecue sauce, calumet baking powder company, capri sun, cheez whiz, chiffon margarine, claussen pickles, cool whip, country time, crystal light, dairylea (cheese), easy cheese, frusen glädjé, general foods, general foods international, grey poupon, jell-o, jet-puffed marshmallows, koogle, kool-aid, kraft dinner, template:kraft foods group, kraft mayo, kraft singles, lunchables, maxwell house, mio, miracle whip, nabob (coffee), oscar mayer, mr. peanut, planter nut & chocolate co., planters, polly-o, pop rocks, rastus, ritz metro, sanka, shake 'n bake, stove top stuffing, vegemite, velveeta, vigroids.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+
+
+                    <div class="container reveal_right">
+                        <br/>
+                        <p align="left">
+                        <b>Wrigley Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands">https://en.wikipedia.org/wiki/Category:Wrigley_Company_brands</a>
+                        </p>			
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_Wrigley.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Wrigley: List of Brands</b><br>
+                                    airwaves (gum), alert (gum), altoids, big league chew, big red (gum), bubble tape, doublemint, eclipse (breath freshener), excel (gum), extra (gum), freedent, hubba bubba, juicy fruit, life savers, lockets, orbit (gum), ouch! (gum), skittles (confectionery), starburst (confectionery), surpass, tunes (confectionery), winterfresh, wrigley's spearmint.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="left">
+                        <b>Coca-Cola Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Coca-Cola_brands">https://en.wikipedia.org/wiki/Category:Coca-Cola_brands</a>
+                        </p>			
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_CocaCola.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Coca-Cola: List of Brands</b><br>
+                                    ades, ambasa, ameyal, amita (fruit juice), apollinaris (water), appletiser, aquarius (sports drink), arwa (water), ayataka, barq's, beat (drink), beverly (drink), bibo, caffeine-free coca-cola, cannings foods limited, cappy (juice), carbonated soda treatment of phytobezoars, ciel (beverage), citra (drink), coca-cola, coca-cola black cherry vanilla, coca-cola blāk, coca-cola c2, coca-cola cherry, coca-cola citra, coca-cola clear, coca-cola life, coca-cola light sango, coca-cola orange, coca-cola raspberry, coca-cola vanilla, coca-cola with lemon, coca-cola with lime, coca-cola zero sugar, dasani, deep river rock, delaware punch, diet coke, diet coke lime, diet coke plus, diet coke with citrus zest, diet inca kola, energy brands, enviga, fairlife, fanta, fanta citrus, far coast, fioravanti (soft drink), five alive, fresca, frescolita, frisco (drink), fruitopia, fruktime, frutonic, full throttle (drink), fuze beverage, georgia (coffee), glaceau smartwater, gladiator (energy drink), gold peak tea, gold spot, golden coca-cola, guaraná jesus, hi-c, hit (drink), honest tea, inca kola, innocent drinks, iron brew (south african soft drink), joya (drink), jugos del valle, kia-ora, kinley, kola inglesa, krest, kuat (drink), leed (drink), lemon & paeroa, lift (soft drink), lilt, limca, live+, maaza, malvern water (bottled water), mare rosso, matte leão, mello yello, mexican coke, mezzo mix, minute maid, mother (drink), nalu (drink), nativa, nestea, new coke, nordic mist, oasis (drink), odwalla, ok soda, pemberton's french wine coca, pibb xtra, powerade, qoo, quatro (beverage), quwat jabal, rac 124, ramblin' root beer, rani juice, red flash, relentless (drink), rimzim, royal tru, santiba, sarsi (drink), senzao, simply orange juice company, smart (drink), sokenbicha, sparkle (drink), sparletta, spring! (brand), sprite (soft drink), sprite ice, sprite remix, sprite zero, stoney (drink), sunfill, surge (drink), swerve (drink), tab (drink), tab clear, tab energy, tanora, thums up, tiky, tum-e yummies, urge (drink), valpre, vault (drink), vegitabeta, victoria (soda), vio (drink), yoli.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+
+                    <div class="container reveal_right">
+                        <br/>
+                        <p align="left">
+                        <b>Pepsi-co Network</b>
+                        <br/>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo">https://fr.wikipedia.org/wiki/Catégorie:Marque_du_groupe_PepsiCo</a>
+                        </p>			
+
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_PepsiCo.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Pepsi-co: List of Brands</b><br>
+                                    aquafina, bénénuts, doritos, frito-lay, gatorade, kas (limonade), lay's, mirinda, mountain dew (marque de boisson), mug root beer, pepsi, quaker oats company, ruffles, tropicana.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="left">
+                        <b>Kellogs Network</b>
+                        <br/>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands">https://en.wikipedia.org/wiki/Category:Kellogg%27s_brands</a>
+                        </p>
+
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_Kellogs.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Kellogs: List of Brands</b><br>
+                                    bear naked, eggo, kashi, keebler, gardenburger, morningstar farms, nutri-grain, sunshine biscuits, all-bran, apple jacks, bran buds, coco pops/cocoa krispies, corn flakes, corn pops, complete wheat bran flakes, country store, crispix, cruncheroos, crunchy nut, froot loops, frosted flakes/frosties, frosted mini-wheats, fruit 'n fibre, honey loops, honey smacks, just right, krave, mini swirlz, nutri-grain, cracklin' oat bran, raisin bran, raisin wheats, rice krispies, smorz, special k, start, carr's, cheez-it, chips deluxe, club crackers, e.l. fudge cookies, famous amos, mother's cookies, vienna fingers, wheatables.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+
+                    <div class="container reveal_right">
+                        <br/>
+                        <p align="left">
+                        <b>Mars Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Mars_brands">https://en.wikipedia.org/wiki/Category:Mars_brands</a>
+                        </p>
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_Mars.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Mars: List of Brands</b><br>
+                                    altoids, cocoavia, combos, cookies &, corn quistos, dolmio, dove bar, ethel m chocolate factory, eukanuba, flavia beverage systems, iams, mars nederland, milky way (spread), milky way (chocolate bar), nutro products, oxo (food), pedigree petfoods, promite, royal canin, seeds of change, sheba (cat food), spillers, uncle ben's, whiskas, whistle (company).
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="left">
+                        <b>Unilever Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/List_of_Unilever_brands">https://en.wikipedia.org/wiki/List_of_Unilever_brands</a>
+                        </p>
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_Unilever.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Unilever: List of Brands</b><br>
+                                    ben & jerry's, best foods, bovril, breyers, brooke bond, instant coffee, brummel & brown, buavita, bushell's, chicken tonight, colman's, conimex, continental, fudgsicle, grom, heartbrand, hellmann's, jif, soya sauce, klondike, knorr, lao cai, lipton, lipton ice tea, lizano sauce, maille, maizena, marmite, mãe terra, peru, paddle pop, pfanni, pg tips, popsicle, pot noodle, pukka, red rose tea, sariwangi, scottish blend, sealtest, streets, talenti, turun sinappi, unox, weis.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+                    <div class="container reveal_right">
+                        <br/>
+                        <p align="left">
+                        <b>Johnson Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands">https://en.wikipedia.org/wiki/Category:Johnson_%26_Johnson_brands</a>
+                        </p>
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_Johnson.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Johnson: List of Brands</b><br>
+                                    aciphex, actifed, acuvue, arestin, aveeno, axert, band-aid, benadryl, bengay, benylin, clean & clear, codral, comfyde, complera, cortef, dacogen, darzalex, ditropan, edurant, flexeril, floxin, haldol, helioplex, imodium, inadine, incivek, intelence, invega, invega, invokana, ionsys, johnson's baby, jurnista, lactaid, leustatin, levaquin, levoquin, listerine, lubriderm, micatin, motilium, motrin, mylanta, natrecor, neosporin, neutrogena, nicorette, nizoral, nucynta, olysio, onetouch ultra, ortho tri-cyclen, penaten, pepcid, prezista, priligy, procrit, reach (brand), reactine, regaine, rembrandt toothpaste, remicade, reopro, resolor, ribomustin, risperdal, rolaids, simponi, sinutab, sirturo, spectazole, splenda, sporanox, stelara, topamax, tylenol (brand), tylenol pm, ultram, velcade, vermox, visine, xarelto, xeplion, yondelis, zarnestra, zeftera, zevtera, zytiga.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+                    <div class="container reveal_left">
+                        <br/>
+                        <p align="left">
+                        <b>Procter & Gamble Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands">https://en.wikipedia.org/wiki/Category:Procter_%26_Gamble_brands</a>
+                        </p>
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%"><div id="boxshadow">
+                                        <img  src="./images/DA_ProcterGamble.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Procter & Gamble: List of Brands</b><br>
+                                    always (brand), ambi pur, ariel (detergent), the art of shaving, aussie (shampoo), bold (detergent), bounty (brand), braun (company), charmin, cheer (brand), citrus hill, clairol, covergirl, crest (toothpaste), crest whitestrips, dawn (brand), daz (detergent), downy, dreft, eukanuba, fairy (brand), febreze, gain (detergent), gillette, gillette mach3, head & shoulders, herbal essences, iams, ivory (soap), joy (dishwashing liquid), luvs, magic eraser, max factor, melamine foam, mr. clean, nice 'n easy (hair coloring), noxell, olay, old spice, oral-b, oral-b glide, pampers, pantene, puffs (facial tissue), rembrandt toothpaste, rochas, vidal sassoon, scope (mouthwash), secret (deodorant brand), sk-ii, swash (brand), swiffer, tampax, tide (brand), wella.
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+                    <div class="container reveal_right">
+                        <br/>
+                        <p align="left">
+                        <b>Nestlé Network</b>
+
+                        <p class="smallText">
+                        Network Graph generated from jupyter Notebook through <a href="https://networkx.github.io/" title="NetworkX" target="_blank"><i><b>NetworkX</b></i></a>. <br>
+                        Data have been extracted, with <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" title="Beautiful Soup"><b><i>Beautiful soup</i></b></a>, from Wikipedia <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Nestlé_brands">https://en.wikipedia.org/wiki/Category:Nestlé_brands</a>
+                        </p>
+
+                        <br/>
+                        <table>
+                            <tr>
+                                <td width="40%">
+                                    <div id="boxshadow">
+                                        <img  src="./images/DA_Nestle.jpg" />					
+                                    </div
+                                </td>
+                                <td width="5%">
+                                </td>
+                                <td width="55%">
+                                    <b>Nestlé: List of Brands</b><br>
+                                    abuelita, aero (chocolate), aero biscuits, after eight, alpo (pet food), arrowhead water, baby ruth, beggin' strips, beneful, bertie beetle, big turk, black magic (chocolates), blue bottle coffee, blue riband (biscuits), bonio, breakaway (biscuit), buitoni, butterfinger, cailler, carlos v (chocolate bar), carnation (brand), caro (drink), cereal partners worldwide, chicos (candy), chocolate surpresa, chocolate-covered raisin, chokito, nestlé chunky, ciego montero, coffee crisp, coffee-mate, coffeemate, contrex, creamola foam, crisp (chocolate bar), deer park spring water, digiorno, dog chow, dolce gusto, dreyer's, drumstick (frozen dairy dessert), enviga, eskimo pie, fancy feast, felix (pet food), fox's confectionery, friskies, frosty paws, gerber life insurance company, gerber products company, häagen-dazs, hjem-is, hot pockets, ice mountain (water), ice screamers, juicy juice, kit kat, kit kats in japan, klim (nestlé), la lechera, lean cuisine, lion bar, lion cereal, mackintosh's, mackintosh's toffee, maggi, maggi noodles, matchmakers, maverick (chocolate), maxibon, milkybar, milo (chocolate bar), milo (drink), mirage (chocolate), mjb (coffee), mövenpick ice cream, nerds (candy), nescafé, nescau, nespresso, nesquik, nestea, nestegg, nestlé bear brand, nestlé crunch, nestlé milk chocolate, nestlé pure life, nestlé purina petcare, nestlé tex, nestlé wagner, nestlé waters north america, nido (brand), nutrament, oh henry!, oompas, ovaltine, ozarka, pamlab, acqua panna, parlour (ice cream), pearson candy company, inc., peppermint crisp, perrier, perugina, poland spring, polly waffle, purina one, ralston purina, redskins (confectionery), reduced cream, ricoré, rolo, rowntree's, s.pellegrino, scorched peanut bar, shredded wheat, sical, sin parar, sjora, sno-caps, sohat, spree (candy), stouffer's, supligen, svitoch, sweet leaf tea company, tender vittles, texan (chocolate bar), thomy, tombstone (pizza), uncle tobys, vice versas, vittel (water), nestlé waters, white knight (chocolate), the willy wonka candy company, winalot, wonder ball, wonka gummies, wonka xploder, yorkie (chocolate bar), zephyrhills (water)
+                                </td>
+                            </tr>
+                        </table>			
+                        </p>
+                        <br/>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <br><br>
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph x																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+
+            <div class="row">
+                <div id="paragraph6_title" class="container reveal_top">
+                    <h3>Enrich the Data: 'Piece of Sugars' per Serving and Product </h3>
+                </div>
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <br>
+                        <p align="right">
+                        <b>Pieces of Sugars</b><br>				
+                        <div id="boxshadow">
+                            <img src="./images/pieceOfSugars.jpg" />					
+                        </div>
+                        </p>				
+                        <p class="smallText">
+                        Picture provided by Gilles Mairet — Travail personnel, CC BY-SA 4.0, Lien
+                        </p>
+                    </div>
+                    <br>
+
+                    <div class="container reveal_right">
+                        <p>
+                        Data have been renriched in order to have for each products the piece of sugars contained in a Serving and in the overall Product.
+                        </p>
+
+                        <p>
+                        To perform that, below functions have been created:
+                        <ul>
+                            <li><b>Enrich_with_sugars_per_serving</b> which is adding the column sugars_per_serving. </li>
+                            <li><b>Enrich_with_sugars_per_product</b> which is adding the column sugars_per_product.</li>
+                            <li><b>get_first_nbr_from_str</b> which is extracting the first number from the quantity's field.</li>
+                            <li><b>multiply_quantity_if_required</b> which is multiplying by the quantity, as some time a product contains many portions.</li>
+                            <li><b>enrich_product_quantity</b> which is counting the quantiy, if required quantity is converted in GRAMMS.</li>
+                        </ul>
+
+                        </p>
+                        <p>
+                        Once done, below fields could be used to measure the quantity of Sugars: sugars_100g, sugars_per_serving, sugars_per_product: 
+                        <div id="boxshadow">
+                            <img src="./images/pieceOfSugarsData.jpg" />					
+                        </div>
+
+                        </p>
+                        <br><br>
+                    </div>	
+                </div>
+            </div>
+
+
+
+            <br/><br/>
+
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- End Navigation																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div align="center">    
+                <table style="width:90%;max-width:1200px; min-width: 400px;" >
+                    <tr>
+                        <td align="left">
+                            <a href="./DataExploration.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right "><img src="./images/moveBack.png" width="40px"></img>Move back to Data Exploration</a>
+                        </td>
+                        <td align="right">
+                            <a href="./DataAnalysis.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right ">Move next to Data Analysis<img src="./images/moveNext.png" width="40px"></img></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
+
+
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- FOOTER		 																									-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <footer>
+            <p><a href="https://www.linkedin.com/in/steverey/" target="_blank" title="LinkedIn Steve Rey">steve.rey@epfl.ch</a></p>
+            <p><a href="https://www.linkedin.com/in/evgeniy-samosenok-83261a1b/" target="_blank" title="LinkedIn Yauheni Samasionak">yauheni.samasionak@epfl.ch</a></p>
+            <p><a href="https://people.epfl.ch/victor.wiklund" target="_blank" title="EPFL Victor Wiklund">victor.wiklund@epfl.ch</a></p> 
+        </footer>
+
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- Script																											-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <script>
+            // JavaScript
+            window.sr = ScrollReveal();
+sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
+sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
+sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
+        </script>
+
+
+    </body>
 </html>
