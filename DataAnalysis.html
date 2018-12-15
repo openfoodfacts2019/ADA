@@ -60,7 +60,7 @@
         <!-- Top Text  															-->
         <!------------------------------------------------------------------------>    
         <div class="container" >
-        
+
 
 
             <!-------------------------------------------------------------------------------------------------------------------->	  
@@ -244,13 +244,13 @@
                 <div id="paragraph2_title" class="container reveal_top">
                     <h3>Sugar, fat and salt</h3>
                     <h4>Sugar alone is already quite bad, but it's not the only foodstuff that has been cited in relation to health problems. Fat and salts too are easy to overconsume, and to that end we ask the question - do bad things come in threes?
-                    <ul>
-                        <li>Are sugare products also fatty?</li>
-                        <li>Are fatty products also salty?</li>
-                        <li>Are salty products also sugary?</li>
-                    </ul>
-                    Let's dive into it!</h4>
- 
+                        <ul>
+                            <li>Are sugare products also fatty?</li>
+                            <li>Are fatty products also salty?</li>
+                            <li>Are salty products also sugary?</li>
+                        </ul>
+                        Let's dive into it!</h4>
+
                 </div>
 
                 <div id="boxshadow" style="background-color:whitesmoke;">	
@@ -414,8 +414,6 @@
                     The answer would probably have been quite different if we'd broken the analysis down by categories, such as cake or vegetables.
 
                     </p>
-                    VWNOTE: If time allows, add the scatterplot colored by salt to view how all three interact? Do the breakdown by category.
-
                 </div>
             </div>
 
@@ -503,9 +501,101 @@
 
                 </div>
             </div>
+
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- Paragraph4 																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+
+            <br/><br/>
+            <br/><br/>
+            <div class="row">
+                <div id="paragraph4_title" class="container reveal_top">
+                    <h3>Overall sugar content</h3>
+                    <h4>While exact guidelines differ and the amount of sugar that is considered bad for you naturally depends on many factors such as age, weight et cetera, there do exist recommendations.
+                        For example, products containing more than 22.5 grams of sugar per 100g should be considered in moderation. Let's see how many products go beyond this limit.</h4>
+
+                </div>
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <p align="right">
+                        <b>Sugar content across all products</b>
+                        </p>
+                        <div id="boxshadow">
+                            <img  src="./images/figures/sugdist.png" class="picture"/>	
+                        </div>
+                        <p align="left">
+                        <br></br>
+                        <p>
+                        Once more ensuring valid ranges for the data and removing outliers we look at the distribution of sugar for all products we find that <b> 25 % </b> of all products go beyond the previously stated limit, and is thus considered too sugary.
+                        </p><p>
+                        We can safely assume that the majority of sugars come from sweets and the like, but we can do a bit better than just assuming. Keeping in mind that we lose 74% of all data when using categories, let's see how sugar content is distributed in the individual categories.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <p align="right">
+                        <b>Sugar content across categories</b>
+                        </p>
+                        <div id="boxshadow">
+                            <img  src="./images/figures/allcats.png" class="picture"/>	
+                        </div>
+                        <p align="left">
+                        <br></br>
+                        <p>
+                        Due to the messy nature of the category labels, written in different languages with different formatting and risk of overlap, we decided to only look at the tventy-five most well populated categories. So the figure above represents the twenty-five most popular food category labels and the amount of products in them that are considered high-sugar.
+
+                        </p><p>
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+                    <h3>CONCLUSIONS</h3>
+                    <p align="left">
+                    If one disregard the fact that the following analysis was done on only around twenty percent of the data, that categories risk being overlapping, differently formatted (or just plain wrong), it seems that things are as one would expect. Delicous things like cake, biscuits and sweets tend to be too sweet by a lot, lending weight to the old adage "too much of a good thing... is a bad thing". Somewhat surprisingly breakfast products seem to be too sweet, but that might be
+                    attributed to culture more than anything else. Most of the data comes from France, so pain au chocolat, jam and sweet cereal might dominate here. Had the data been more completely filled in it would have been interesting to tie sugar-content and breakfast habits togethere on a country-basis.
+                    </p><p>
+                    For those interested, the exact distributions for the different categories are plotted below
+                    </p>
+
+
+
+                <div id="boxshadow" style="background-color:whitesmoke;">	
+                    <div class="container reveal_left">
+                        <p align="right">
+                        <b> Individual category distributions</b>
+                        </p>
+                        <div id="boxshadow">
+                            <img  src="./images/figures/indcats.png" class="picture"/>	
+                        </div>
+                        <p align="left">
+                        <br></br>
+                        <p>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <!-- Paragraph 																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+
         </div>	
 
         <br/><br/>
+
+
+
 
         <!-------------------------------------------------------------------------------------------------------------------->	  
         <!-- End Navigation																									-->
@@ -525,10 +615,10 @@
 
 
 
-        
+
 
         <div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
-        
+
         </div>
 
         <!-------------------------------------------------------------------------------------------------------------------->	  
@@ -548,9 +638,9 @@
         <script>
             // JavaScript
             window.sr = ScrollReveal();
-            sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
-            sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
-            sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
+sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
+sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
+sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
         </script>
 
 
