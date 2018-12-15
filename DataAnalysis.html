@@ -94,10 +94,32 @@
                 </div>
 
                 <div id="boxshadow" style="background-color:whitesmoke;">	
+                    
                     <div class="container reveal_left">
-                        <br>
+                        <p align="left">
+                            <div id="boxshadow">
+                                <img  src="./images/DA_tooMuchSugar.jpg"  class="picture"/>	
+                            </div>
+                            <p class="smallText">
+                                Proportion of Sugars per Products, generated with Seaborn from jupyter Notebook.
+                            </p>                   			
+                        </p>	
+                        <br><br>		
+                    </div>	
+
+
+                     <div class="container reveal_right">
+                        <p align="left">
+                            For the first investigation, we would like to check if we can already see some tendances and have a look on the most sweet Products.
+                            As we can see, there is not so much surprise here, <b>Desserts</b> and <b>beverages</b> are shown on the top. 
+                        </p>			
+                    </div>	
+
+                    
+                    <div class="container reveal_left">
                         <p>
-                        Incredible !!! <br>After a deep analysis, we discover that the product which is containing the highest quantity of sugar, has a nutriction <b>score of D</b>, which is quite a bad score.
+                        We did some spot checks, in order to have some idea about some sweety prodcuts.
+                        <br>Incredible !!! After a deep analysis, we discovered that the product which is containing the highest quantity of sugar, has a nutriction <b>score of D</b>, which is quite a bad score.
                         </p>
                         <a href="http://www.mangerbouger.fr/Manger-Mieux/Comment-manger-mieux/Comprendre-les-infos-nutritionnelles2/Le-Nutri-Score-l-information-nutritionnelle-en-un-coup-d-oeil" target="_blank" title="Check what Nutrition Score is">
                             <img  src="./images/Nutriscore.jpg"  class="picture"/>				
@@ -110,49 +132,105 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div id="boxshadow">
-                                        <img  src="./images/DA_NutrifFact.jpg" style="width:200px" class="picture"/>	
+                                    <div id="boxshadow">                                        
+                                        <img  src="./images/DA_Sugar.jpg" style="width:200px" class="picture"/>		
                                     </div>
                                 </td>
                                 <td>&nbsp;&nbsp;</td>
                                 <td>
                                     <p>
-                                    As written on the nutrition's facts, there is a high quantity of sugar.
+                                    As written on the nutrition's facts, there is a high quantity of sugar.<br>
+                                    By the way, this product is nothing else than a <b>1kg of Sugar</b>. At this stage, we all love data analysis !
                                     </p>
+                                    <img  src="./images/DA_NutrifFact.jpg" style="width:200px" class="picture"/>
                                 </td>
                             </tr>
                         </table>				
                         </p>
+                        <br>
                     </div>
 
-                    <div class="container reveal_left">
+
+
+
+
+                    <div class="container reveal_right">
                         <p align="right">
-                        <br>
                         <table>
                             <tr>
                                 <td>
                                     <p>
-                                    By the way, this product is nothing else than a <b>1kg of Sugar</b>. At this stage, we all love data analysis !
+                                    What could we say about this ice cream ? <br>
+                                    Which is containing about 28gr of sugar for a portion of 100g. You are almost eating 28% of sugars !!
+                                    </p>
+
+                                </td>
+                                <td>&nbsp;&nbsp;</td>	
+                                <td>
+                                    <div id="boxshadow">
+                                        <img  src="./images/DA_cremedOr.jpg" style="width:200px" class="picture"/>	
+                                    </div>
+                                    &nbsp;
+                                    <div id="boxshadow">
+                                        <img  src="./images/DA_cremedOrFacts.jpg" style="width:200px" class="picture"/>	
+                                    </div>
+                                </td>
+                                <td>&nbsp;&nbsp;</td>
+                                <td>
+                                    <p>
+                                    This Product M-Quick is quite amaizing too, a drink to cacao, which contains 80% of sugars and sold as cacao !!!
                                     </p>
                                 </td>
                                 <td>&nbsp;&nbsp;</td>	
                                 <td>
                                     <div id="boxshadow">
-                                        <img  src="./images/DA_Sugar.jpg" style="width:200px" class="picture"/>	
+                                        <img  src="./images/DA_MQUICK.jpg" style="width:200px" class="picture"/>	
                                     </div>
                                 </td>
-
                             </tr>
+                            
                         </table>				
                         </p>
                     </div>
 
+
                     <div class="container reveal_right">
-                        <p align="left">
-                        
-                        </p>			
-                        <br/><br/>
-                    </div>	
+                        <p align="right">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p>
+                                    We are starting to hate Data Analysis, why our Toblerone is containing so much sugar ? If the numbers are correct, it is composed with almost 60% of sugars !
+                                    </p>
+                                </td>
+                                <td>&nbsp;&nbsp;</td>	
+                                <td>
+                                    <div id="boxshadow">
+                                        <img  src="./images/DA_toblerone.jpg" style="width:200px" class="picture"/>	
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </table>				
+                        </p>
+                    </div>
+
+
+                    <div class="container reveal_left">
+                        <p>
+                            Have a look below, on Word Cloud, the Products containing the most sugars !
+                        </p>
+
+                        <p align="right">
+                            <div id="boxshadow">
+                                <img  src="./images/DA_MostSweetProducts.jpg" class="picture"/>	
+                            </div>     
+                            <p class="smallText">
+                                Proportion of Sugars per Products, generated with Word Cloud from jupyter Notebook.
+                            </p>                   			
+                        </p>                        
+                    </div>
+                    <br>
                 </div>
             </div>
 
@@ -183,6 +261,9 @@
                         <div id="boxshadow">
                             <img  src="./images/figures/pairplot.png" class="picture"/>	
                         </div>
+                        <p class="smallText">
+                            Scatterplot of sugar, salt and fat in products, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         What we see above is a set of scatterplots based on all the products that contained valid (in the range 0-100g)
@@ -216,6 +297,9 @@
                         <div id="boxshadow">
                             <img class="picture" src="./images/figures/unfixed_density.png" />					
                         </div>
+                        <p class="smallText">
+                            Density plot of sugar, salt and fat in products, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         That paints, quite literally, a different picture. 
@@ -233,6 +317,9 @@
                         <div id="boxshadow">
                             <img class="picture" src="./images/figures/fixed_density.png" />					
                         </div>
+                        <p class="smallText">
+                            Density plot of sugar, salt and fat in products without outliers, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         Nice.
@@ -250,6 +337,9 @@
                         <div id="boxshadow">
                             <img class="picture" src="./images/figures/p_coeff1.png" />					
                         </div>
+                        <p class="smallText">
+                            Pearson Coefficient matrix, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         In this first attempt at measuring the correlation we used the data for all products, and the results point to 
@@ -268,6 +358,9 @@
                         <div id="boxshadow">
                             <img class="picture" src="./images/figures/p_coeff2.png" />					
                         </div>
+                        <p class="smallText">
+                            Pearson Coefficient Matrix without outliers, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         In this second matrix some trends do appear, though they are very weak. Sugar and salt is weakly negatively correlated, 
@@ -286,6 +379,9 @@
                         <div id="boxshadow">
                             <img class="picture" src="./images/figures/s_coeff.png" />					
                         </div>
+                        <p class="smallText">
+                            Spearman Coefficient without outliers, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         Using the Spearman coefficent revealed some more trends in the data.
@@ -349,6 +445,9 @@
                         <div id="boxshadow">
                             <img  src="./images/figures/prodcount.png" class="picture"/>
                         </div>
+                        <p class="smallText">
+                            Amount of Products for different types of brand labels, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         While our original intent was to use the ten largest producers and divide their products into the categories we were interested in, we quickly discovered
@@ -373,6 +472,9 @@
                         <div id="boxshadow">
                             <img class="picture" src="./images/figures/cat_density.png" />
                         </div>
+                        <p class="smallText">
+                            Probability density for sugar accros labels, generated from jupyter Notebook.
+                        </p>                   			
                         <p align="left">
                         <br></br>
                         What we are looking at here is an estimation of how likely a certain amount of sugar is for a certain category of food.
