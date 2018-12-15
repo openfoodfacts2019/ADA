@@ -1,172 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>cs_team_beta_hw2: Open Food Facts</title>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	  
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
-  	<link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
-  	<link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
+    <head>
+        <title>cs_team_beta_hw2: Open Food Facts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-	<script src="./jquery.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-    <script src="./js/scrollreveal.min.js"></script>
-    <script type="text/javascript" src="./js/d3.min.js"></script>
-	<script>
-		(function() {
-			var config = {
-				viewFactor: 0.08,
-				duration: 800,
-				reset: true,
-			}
-			window.sr = new ScrollReveal(config)
-		})()
-		</script>
-</head>
-<body>
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/boxshadow.css">
+        <link rel="stylesheet" type="text/css" href="./css/stylereveal.css">
+        <link rel="stylesheet" type="text/css" href="./css/styleOpenFoodFacts.css">
 
-
-<!------------------------------------------------------------------------>  
-<!-- Header																-->
-<!------------------------------------------------------------------------>  
-<div class="header" style="background-image:url(./images/left.jpg);background-position: left top; background-repeat: no-repeat">
-	<h1>Eeat less sugar,<br>you're sweet enough already</h1>
-	<p style="font-size:9px;color:gray">cs_team_beta_hw2 - Automn 2018</p>
-	<p>
-		<a href="https://world.openfoodfacts.org/data" target="_blank">
-			<img alt="Open Food Facts" src="./images/openfoodfacts-logo-en-178x150.png" srcset="./images/openfoodfacts-logo-en-178x150.png" width="150px"/>
-		</a>		
-	</p>
-</div>
+        <script src="./jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/scrollreveal.min.js"></script>
+        <script type="text/javascript" src="./js/d3.min.js"></script>
+        <script>
+            (function() {
+                var config = {
+                    viewFactor: 0.08,
+                    duration: 800,
+                    reset: true,
+                }
+                window.sr = new ScrollReveal(config)
+            })()
+        </script>
+    </head>
+    <body>
 
 
-<!------------------------------------------------------------------------>  
-<!-- MENU 																-->
-<!------------------------------------------------------------------------>  
-<div class="topnav" style="vertical-align: middle;" > 
-	<table align="center"><tr>
-		<td><a href="./index.html" class="topselected"><div class="selected">Home</div></a></td>
-		<td><a href="./DataExploration.html">Data Exploration</a></td>
-		<td><a href="./DataCleaning.html">Data Cleaning</a></td>
-		<td><a href="./DataAnalysis.html">Data Analysis</a></td>
-		<td><a href="./DataGame.html">Data Game</a></td>
-</tr></table>
-</div>
+        <!------------------------------------------------------------------------>  
+        <!-- Header																-->
+        <!------------------------------------------------------------------------>  
+        <div class="header" style="background-image:url(./images/left.jpg);background-position: left top; background-repeat: no-repeat">
+            <h1>Eeat less sugar,<br>you're sweet enough already</h1>
+            <p style="font-size:9px;color:gray">cs_team_beta_hw2 - Automn 2018</p>
+            <p>
+            <a href="https://world.openfoodfacts.org/data" target="_blank">
+                <img alt="Open Food Facts" src="./images/openfoodfacts-logo-en-178x150.png" srcset="./images/openfoodfacts-logo-en-178x150.png" width="150px"/>
+            </a>		
+            </p>
+        </div>
 
-<!------------------------------------------------------------------------>    
-<!-- Top Text  															-->
-<!------------------------------------------------------------------------>    
-<div class="container">
-  <br>
-  <br>
-  <div class="row" style="align:center;">
-	<table style="width:100%;" >
-		<tr>
-		<td>
-			<div id="KPI">
-				<p class="bigText">
-					6'155'000
-					
-				</p>
-				<p class="smallText">
-					Products
-				</p>
-			</div>
-		</td>
-		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		<td>
-	
-			<div id="KPI">
-				<p class="bigText">
-					155'000
-					
-				</p>
-				<p class="smallText">
-					Contributors
-				</p>
-			</div>
-		</td>
-		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		<td>
-		<div id="KPI">
-			<p class="bigText">
-				6155'000
-				
-			</p>
-			<p class="smallText">
-				kg of Sugars
-			</p>
-		</div>
-		</td>
-		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		<td>
-		<div id="KPI">
-			<p class="bigText">
-				2155'000
-				
-			</p>
-			<p class="smallText">
-				Countries
-			</p>
-		</div>
-		</td>
-	</tr>
-	</table>
-  </div>
-  
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>#Abstract</h3>
-      <p>
- Many people consume too much sugar often even without realizing it. Is is not uncommon for products to contain added or hidden sugar, such as Low-fat Yogurst, BBQ Sauce, ketchup or Fruit Juice. To put into perspective, some sauces may contains more than 50 per cent of sugar. (<a href="https://www.healthyfoodguide.com.au/articles/2015/july/how-much-sugar-sauce" target="_blank">*Ref1</a>)
+
+        <!------------------------------------------------------------------------>  
+        <!-- MENU 																-->
+        <!------------------------------------------------------------------------>  
+        <div class="topnav" style="vertical-align: middle;" > 
+            <table align="center"><tr>
+                    <td><a href="./index.html" class="topselected"><div class="selected">Home</div></a></td>
+                    <td><a href="./DataExploration.html">Data Exploration</a></td>
+                    <td><a href="./DataCleaning.html">Data Cleaning</a></td>
+                    <td><a href="./DataAnalysis.html">Data Analysis</a></td>
+                    <td><a href="./DataGame.html">Data Game</a></td>
+                </tr></table>
+        </div>
+
+        <!------------------------------------------------------------------------>    
+        <!-- Top Text  															-->
+        <!------------------------------------------------------------------------>    
+        <div class="container">
+            <br>
+            <br>
+            <div class="row" style="align:center;">
+                <table style="width:100%;" >
+                    <tr>
+                        <td>
+                            <div id="KPI">
+                                <p class="bigText">
+                                6'155'000
+
+                                </p>
+                    <p class="smallText">
+                    Products
+                    </p>
+                            </div>
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+
+                            <div id="KPI">
+                                <p class="bigText">
+                                155'000
+
+                                </p>
+                                <p class="smallText">
+                                Contributors
+                                </p>
+                            </div>
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <div id="KPI">
+                                <p class="bigText">
+                                6155'000
+
+                                </p>
+                                <p class="smallText">
+                                kg of Sugars
+                                </p>
+                            </div>
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <div id="KPI">
+                                <p class="bigText">
+                                2155'000
+
+                                </p>
+                                <p class="smallText">
+                                Countries
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>#Abstract</h3>
+                    <p>
+                    Many people consume too much sugar, often even without realizing it. Is is not uncommon for products to contain added or hidden sugar, products such as low-fat yogurt, BBQ Sauce, ketchup or fruit juice. To put into perspective, some sauces may contains more than 50 per cent of sugar. (<a href="https://www.healthyfoodguide.com.au/articles/2015/july/how-much-sugar-sauce" target="_blank">*Ref1</a>)
 
                     Based on the "AHA Scientific Statement" (<a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627"  target="_blank">*Ref2</a>), the major sources of added sugars can be found in categories such as regular soft drinks, sugars, candy, cakes, cookies, pies and fruit drinks, dairy desserts and milk products:
 
 
-		<div id="boxshadow">
-			<table style="border:0px solid;"><tr style="border:0px solid;background-color:whitesmoke;">
-			<td width="80%"><b>Food categories</b></td><td align="center"><b>Contribution to added sugar intake</b>
-				<br><p class="smallText">(% of total added sugar consumed)</p></td></tr>
-			<tr><td>Regular soft drinks</td><td align="center" valign="top">33.0</td></tr>
-			<tr><td>Sugars and candy</td><td align="center" valign="top">16.1</td></tr>
-			<tr><td>Cakes, cookies, pies</td><td align="center" valign="top">12.9</td></tr>
-			<tr><td>Fruit drinks  <br><p class="smallText">(fruitades and fruit punch)</p></td><td align="center" valign="top">&nbsp;&nbsp;&nbsp;9.7</td></tr>
-			<tr><td>Dairy desserts and milk products  <br><p class="smallText">(ice cream sweetened yogurt, and sweetened milk)</p></td><td align="center" valign="top">&nbsp;&nbsp;&nbsp;8.6</td></tr>
-			<tr><td>Other grains <br><p class="smallText">(cinnamon toast and honey-nut waffles)</p></td><td align="center" valign="top">&nbsp;&nbsp;&nbsp;5.8</td></tr>
-			</table>
-		</div>
-		<br>
-	</p>
-	
-		<p>
-	    <p>
+                    <div id="boxshadow">
+                        <table style="border:0px solid;"><tr style="border:0px solid;background-color:whitesmoke;">
+                                <td width="80%"><b>Food categories</b></td><td align="center"><b>Contribution to added sugar intake</b>
+                                    <br><p class="smallText">(% of total added sugar consumed)</p></td></tr>
+                            <tr><td>Regular soft drinks</td><td align="center" valign="top">33.0</td></tr>
+                            <tr><td>Sugars and candy</td><td align="center" valign="top">16.1</td></tr>
+                            <tr><td>Cakes, cookies, pies</td><td align="center" valign="top">12.9</td></tr>
+                            <tr><td>Fruit drinks  <br><p class="smallText">(fruitades and fruit punch)</p></td><td align="center" valign="top">&nbsp;&nbsp;&nbsp;9.7</td></tr>
+                            <tr><td>Dairy desserts and milk products  <br><p class="smallText">(ice cream sweetened yogurt, and sweetened milk)</p></td><td align="center" valign="top">&nbsp;&nbsp;&nbsp;8.6</td></tr>
+                            <tr><td>Other grains <br><p class="smallText">(cinnamon toast and honey-nut waffles)</p></td><td align="center" valign="top">&nbsp;&nbsp;&nbsp;5.8</td></tr>
+                        </table>
+                    </div>
+                    <br>
+                    </p>
+
+                    <p>
+                    <p>
                     It's easy to consume too much sugar and the drawbacks are many. Oveconsumption can lead to obesity, increase the risk of heart disease, diabetes (<a href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/added-sugars"  target="_blank">*Ref3</a>) and even cancer.
                     </p>
-		
-		
-		
-		
-		
-	     <p>
+
+
+
+
+
+                    <p>
                     Therefore, it's crucial to limit the consumption of foods with high amounts of added sugars. According to the American Heart Association (AHA) (<a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627" target="_blank">*Ref4</a>), the maximum amount of added sugars per day are limited to:
                     </p><p>
-		<ul><li>
-		<b>Men</b>: 150 calories per day <br><p class="smallText">(37.5 grams or 9 teaspoons or ~6.30 pieces of sugar)</p>
-		</li><li>
-		<b>Women</b>: 100 calories per day <br><p class="smallText"> (25 grams or 6 teaspoons or ~4.20 pieces of sugar)</p>
-		</li></ul>
-		The US dietary guidelines advise people to limit their intake to less than 10% of their daily calorie intake. For a person eating 2,000 calories per day, this would equal 50 grams of sugar, or about 12.5 teaspoons or 8.4 pieces of sugar. (<a href="https://health.gov/dietaryguidelines/2015/guidelines/executive-summary/" target="_blank">*Ref5</a>)
-		</p><p>
-		“Keeping intake of free sugars to less than 10% of total energy intake reduces the risk of overweight, obesity and tooth decay,” says Dr Francesco Branca, Director of WHO’s Department of Nutrition for Health and Development.(<a href="http://www.who.int/mediacentre/news/releases/2015/sugar-guideline/en/" target="_blank">*Ref6</a>)
-		</p><p>
-		Based on the information above, we would like to explore the "Open Food Facts Datbase", apply the knowledge of data analysis technics and best practices acquired during attending Applied Data Analysis course at EPFL in Lausanne in Autumn 2018 and figure out meaninful/insightful relationship between different dimensions used to categorize the data or external metrics.
-		</p>
+                    <ul><li>
+                            <b>Men</b>: 150 calories per day <br><p class="smallText">(37.5 grams or 9 teaspoons or ~6.30 pieces of sugar)</p>
+                        </li><li>
+                            <b>Women</b>: 100 calories per day <br><p class="smallText"> (25 grams or 6 teaspoons or ~4.20 pieces of sugar)</p>
+                        </li></ul>
+                        The US dietary guidelines advise people to limit their intake to less than 10% of their daily calorie intake. For a person eating 2,000 calories per day, this would equal 50 grams of sugar, or about 12.5 teaspoons or 8.4 pieces of sugar. (<a href="https://health.gov/dietaryguidelines/2015/guidelines/executive-summary/" target="_blank">*Ref5</a>)
+                    </p><p>
+                    “Keeping intake of free sugars to less than 10% of total energy intake reduces the risk of overweight, obesity and tooth decay,” says Dr Francesco Branca, Director of WHO’s Department of Nutrition for Health and Development.(<a href="http://www.who.int/mediacentre/news/releases/2015/sugar-guideline/en/" target="_blank">*Ref6</a>)
+                    </p><p>
+                    Based on the information above, we would like to explore the "Open Food Facts Datbase", apply the knowledge of data analysis technics and best practices acquired during attending Applied Data Analysis course at EPFL in Lausanne in Autumn 2018 and figure out meaninful/insightful relationship between different dimensions used to categorize the data or external metrics.
+                    </p>
 
 
-    </div>
-              <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
                     <h3># Research questions</h3>
                     <p>There are lots of different dimensions/metrics which could be used to analyse/slice the data: dates when the product was added and last modified, produced country, brand, categories (e.g. snack, dessert), country / store where the product was purchased, size and weight of the product, amount of fat, sugar, vitamins, chemicals, ingredients as text etc
                     We will explore the dimensions/metrics above and relate some of those to each other or such generic metrics as country (producer or consumer) GDP, life expectancy (vitamins, salt, sugar, other chemicals), expore which country/store is the biggest produce/consumer of product by brand/ingredients etc. We will also check how some of the metrics evolve over time and perform some Data Cleaning and enrichments.			
@@ -188,7 +188,7 @@
                     </div>	
                     <br><br>
                     <p>
-                     We were originally very ambitous with our plans for what we would do with the data. However, during the exploratory phase of the project we encountered problems.
+                    We were originally very ambitous with our plans for what we would do with the data. However, during the exploratory phase of the project we encountered problems.
                     Categories were lacking, values were outside of valid ranges, the naming system differed between contributors et cetera et cetera - in essence, the data was quite messy.
                     This did indeed match well with what we had heard during lectures, that one of the most time consuming tasks for the Data Scientist was data cleaning, but it nevertheless came as a slight surprise. To that end we decided to spend more time at data exploration and data cleaning that we could have used for analysis, if the database had been more structured in the first place.
                     </p>
@@ -208,125 +208,125 @@
 
 
                 <div class="col-sm-4">
-      <h3># Dataset</h3>        
-		<p>
-			<a href="https://world.openfoodfacts.org" target="_blank" title="Open Food Facts"><b>Open Food Facts</b></a> database contains the information on food products from around the world. For each item, the database stores its generic name, quantity, type of packaging, brand, category, manufacturing or processing locations, countries and stores where the product is sold, list of ingredients, ... 
-		</p>
-		<p>
-			<a href="https://world.openfoodfacts.org/who-we-are" target="_blank" title="Open Food Facts, who we are...">
-			"The project was started by <b>Stéphane Gigandet</b>, creator of the food blogs portals Recettes de Cuisine (French) and Very Good Recipes, and various other collaborative and/or food-related projects (mostly in French, e.g. Manger Bloguer and Informations Nutritionnelles).
-			Stéphane takes care in particular of the technical architecture of Open Food Facts, its development and the hosting of the site and its database."
-			</a>
-		</p>
-		<p>
-			<a href="https://world.openfoodfacts.org/who-we-are" target="_blank" title="Open Food Facts, Contributors...">
-				"The <b>contributors</b> to the <b>Open Food Facts project</b> are people that are passionate about food. They add products to the database and they are also the primary source for improvements and applications ideas through the Idea Forum and several others venues for the Open Food Facts community to share and discuss.
-				<b>Open Food Facts</b> is a project open to all: you can join them by creating an account in less than a minute, and you can add your first product in a few more minutes."
-			</a>
-		</p>
-    </div>
-
-	
-
-
-	<div class="col-sm-4">
-      <h3># References/Sources</h3>
-		<p>
-		<ul>
-			<li>
-			<a href="https://www.healthyfoodguide.com.au/articles/2015/july/how-much-sugar-sauce" target="_blank">
-				<b>*Ref1</b> Heathy Food: How much sugar is in that sauces ?
-			</a>
-			</li>
-			<li>
-			<a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627" target="_blank">
-				<b>*Ref2</b> Major Sources of Added Sugars in the American Diet
-			</a>
-			</li>
-			<li>
-			<a href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/added-sugars" target="_blank">
-				<b>*Ref3</b> Maximum amount of added sugars recommendation from the American Heart Association
-			</a>
-			</li>
-			<li>
-			<a href="https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0057873.g002" target="_blank">
-				<b>*Ref4</b> Relationship of Sugar to Population-Level Diabetes Prevalence
-			</href>
-			</li>
-			<li>
-			<a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627" target="_blank">
-				<b>*Ref5</b> Major Sources of Added Sugars in the American Diet
-			</a>
-			</li>
-			<li>
-			<a href="https://health.gov/dietaryguidelines/2015/guidelines/executive-summary/" target="_blank">
-				<b>*Ref6</b> US Dietary guideleines 
-			</a>
-			</li>
-			<li>
-			<a href="http://www.who.int/mediacentre/news/releases/2015/sugar-guideline/en/" target="_blank">
-				<b>*Ref7</b> World Health Organization: Reduce sugars intake 
-			</a>
-			</li>
-		</ul>	
-		</p>
-    </div>
-  
-	<div class="col-sm-4">
-		<h3># Sources</h3>
-		<p>Realised in the context of the course of <a href="https://edu.epfl.ch/coursebook/en/applied-data-analysis-CS-401" target="_blank"> EPFL Applied Data Analysis (CS-401)</a> teached by <a href="https://people.epfl.ch/278364" target="_blank">Robert West</a>. Jupyter Notebook/Sources could be founded <a href="https://github.com/esamosenok/ADA_Project_2018" target="_blank" title="github">here</a>. </p>
-	</div>
-
-
-</div>
+                    <h3># Dataset</h3>        
+                    <p>
+                    <a href="https://world.openfoodfacts.org" target="_blank" title="Open Food Facts"><b>Open Food Facts</b></a> database contains the information on food products from around the world. For each item, the database stores its generic name, quantity, type of packaging, brand, category, manufacturing or processing locations, countries and stores where the product is sold, list of ingredients, ... 
+                    </p>
+                    <p>
+                    <a href="https://world.openfoodfacts.org/who-we-are" target="_blank" title="Open Food Facts, who we are...">
+                        "The project was started by <b>Stéphane Gigandet</b>, creator of the food blogs portals Recettes de Cuisine (French) and Very Good Recipes, and various other collaborative and/or food-related projects (mostly in French, e.g. Manger Bloguer and Informations Nutritionnelles).
+                        Stéphane takes care in particular of the technical architecture of Open Food Facts, its development and the hosting of the site and its database."
+                    </a>
+                    </p>
+                    <p>
+                    <a href="https://world.openfoodfacts.org/who-we-are" target="_blank" title="Open Food Facts, Contributors...">
+                        "The <b>contributors</b> to the <b>Open Food Facts project</b> are people that are passionate about food. They add products to the database and they are also the primary source for improvements and applications ideas through the Idea Forum and several others venues for the Open Food Facts community to share and discuss.
+                        <b>Open Food Facts</b> is a project open to all: you can join them by creating an account in less than a minute, and you can add your first product in a few more minutes."
+                    </a>
+                    </p>
+                </div>
 
 
 
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- End Navigation																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<div align="center">    
-		<table style="width:90%;max-width:1200px; min-width: 400px;" >
-			<tr>
-				<td align="left">
-					
-				</td>
-				<td align="right">
-					<a href="./DataExploration.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right ">Move next to Data Exploration<img src="./images/moveNext.png" width="40px"></img></a>
-				</td>
-			</tr>
-		</table>
-	</div>
+                <div class="col-sm-4">
+                    <h3># References/Sources</h3>
+                    <p>
+                    <ul>
+                        <li>
+                            <a href="https://www.healthyfoodguide.com.au/articles/2015/july/how-much-sugar-sauce" target="_blank">
+                                <b>*Ref1</b> Heathy Food: How much sugar is in that sauces ?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627" target="_blank">
+                                <b>*Ref2</b> Major Sources of Added Sugars in the American Diet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/added-sugars" target="_blank">
+                                <b>*Ref3</b> Maximum amount of added sugars recommendation from the American Heart Association
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0057873.g002" target="_blank">
+                                <b>*Ref4</b> Relationship of Sugar to Population-Level Diabetes Prevalence
+                                </href>
+                        </li>
+                        <li>
+                            <a href="https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.109.192627" target="_blank">
+                                <b>*Ref5</b> Major Sources of Added Sugars in the American Diet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://health.gov/dietaryguidelines/2015/guidelines/executive-summary/" target="_blank">
+                                <b>*Ref6</b> US Dietary guideleines 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.who.int/mediacentre/news/releases/2015/sugar-guideline/en/" target="_blank">
+                                <b>*Ref7</b> World Health Organization: Reduce sugars intake 
+                            </a>
+                        </li>
+                    </ul>	
+                    </p>
+                </div>
+
+                <div class="col-sm-4">
+                    <h3># Sources</h3>
+                    <p>Realised in the context of the course of <a href="https://edu.epfl.ch/coursebook/en/applied-data-analysis-CS-401" target="_blank"> EPFL Applied Data Analysis (CS-401)</a> teached by <a href="https://people.epfl.ch/278364" target="_blank">Robert West</a>. Jupyter Notebook/Sources could be founded <a href="https://github.com/esamosenok/ADA_Project_2018" target="_blank" title="github">here</a>. </p>
+                </div>
+
+
+            </div>
 
 
 
-	<div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
-			
-</div>
 
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- FOOTER		 																									-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<footer>
-	<p><a href="https://www.linkedin.com/in/steverey/" target="_blank" title="LinkedIn Steve Rey">steve.rey@epfl.ch</a></p>
-	<p><a href="https://www.linkedin.com/in/evgeniy-samosenok-83261a1b/" target="_blank" title="LinkedIn Yauheni Samasionak">yauheni.samasionak@epfl.ch</a></p>
-	<p><a href="https://people.epfl.ch/victor.wiklund" target="_blank" title="EPFL Victor Wiklund">victor.wiklund@epfl.ch</a></p> 
-</footer>
+            <!-------------------------------------------------------------------------------------------------------------------->	  
+            <!-- End Navigation																									-->
+            <!-------------------------------------------------------------------------------------------------------------------->
+            <div align="center">    
+                <table style="width:90%;max-width:1200px; min-width: 400px;" >
+                    <tr>
+                        <td align="left">
 
-
-
-<!-------------------------------------------------------------------------------------------------------------------->	  
-<!-- Script																											-->
-<!-------------------------------------------------------------------------------------------------------------------->
-<script>
-    // JavaScript
-    window.sr = ScrollReveal();
-    sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
-    sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
-    sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
-</script>
+                        </td>
+                    <td align="right">
+                        <a href="./DataExploration.html" style="font-size: 20px;color:#2f2f2f;vertical-align:right ">Move next to Data Exploration<img src="./images/moveNext.png" width="40px"></img></a>
+                    </td>
+                    </tr>
+                </table>
+            </div>
 
 
-</body>
+
+            <div style="width: 100%;height:200px;background-image:url(./images/right.jpg);background-position: right bottom; background-repeat: no-repeat"></div>
+
+        </div>
+
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- FOOTER		 																									-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <footer>
+            <p><a href="https://www.linkedin.com/in/steverey/" target="_blank" title="LinkedIn Steve Rey">steve.rey@epfl.ch</a></p>
+            <p><a href="https://www.linkedin.com/in/evgeniy-samosenok-83261a1b/" target="_blank" title="LinkedIn Yauheni Samasionak">yauheni.samasionak@epfl.ch</a></p>
+            <p><a href="https://people.epfl.ch/victor.wiklund" target="_blank" title="EPFL Victor Wiklund">victor.wiklund@epfl.ch</a></p> 
+        </footer>
+
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->	  
+        <!-- Script																											-->
+        <!-------------------------------------------------------------------------------------------------------------------->
+        <script>
+            // JavaScript
+            window.sr = ScrollReveal();
+sr.reveal('.reveal_left', { origin: 'left', distance: '100px' });
+sr.reveal('.reveal_right', { origin: 'right', distance: '100px' });
+sr.reveal('.reveal_top', { origin: 'top', distance: '100px' });
+        </script>
+
+
+    </body>
 </html>
