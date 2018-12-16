@@ -245,7 +245,7 @@
                     <h3>Sugar, fat and salt</h3>
                     <h4>Sugar alone is already quite bad, but it's not the only foodstuff that has been cited in relation to health problems. Fat and salts too are easy to overconsume, and to that end we ask the question - do bad things come in threes?
                         <ul>
-                            <li>Are sugare products also fatty?</li>
+                            <li>Are sugary products also fatty?</li>
                             <li>Are fatty products also salty?</li>
                             <li>Are salty products also sugary?</li>
                         </ul>
@@ -323,8 +323,8 @@
                         <p align="left">
                         <br></br>
                         Nice.
-                        what we see now is how sugar, fat and salt correlates in the products. 
-                        Visually it seems that most products contain zero of all three quantities, maybe that more sugar tend to imply less salt... but honestly, it's still difficult to tell.
+                        What we see now is how sugar, fat and salt correlates in the products. 
+                        Visually it seems that most products contain around zero of all three quantities, Maybe that more sugar tend to imply less salt but honestly, it's still difficult to tell.
                         To amend that we'll start of with trying to use the Pearson coefficent to see how well the relationships in the plots can be described by a simple line.
                         </p>
                     </div>
@@ -367,7 +367,7 @@
                         with an increase in one coming at the decrease of another. Meanwhile sugar and fat, fat and salt exhibit a weak positive relationship.
 
                         </p><p>
-                        Pearson is limited in that it only measures linear relationships, so for the sake of completedness we also decided to have a look at the Spearman coefficient.
+                        Pearson is limited in that it only measures linear relationships, so for the sake of completedness we also decided to have a look at the Spearman coefficient to see if there is a rank-correlation.
                         </p>
                     </div>
 
@@ -510,10 +510,9 @@
 
                     <h3>CONCLUSIONS</h3>
                     <p align="left">
-                    An initial hypothesis was that the low-cost brands would be more sugary since sugar is cheap and high-calorie foods tend to be inexpensive.
+                    We initially held the idea that since unhealthy food tend to be cheap, we would find that the low-cost brands contained more sugar. Give the results it is difficult to make that statement, and given the low amount of data available it is probably more true that our results reflect the *type* of product that go into each brand.
                     </p><p>
-                    The results while not based on as much data as we'd like seem to disagree however.
-                    Rather, it looks like the high-end items tend to contain more sugar perhaps because these brands tend to be constituted by luxury products.
+                    Ergo, luxury products have a higher chance of being sweets, wine and the like, while canned vegetables go into the budget brands.
                     </p>
 
                 </div>
@@ -529,7 +528,7 @@
                 <div id="paragraph4_title" class="container reveal_top">
                     <h3>Overall sugar content</h3>
                     <h4>While exact guidelines differ and the amount of sugar that is considered bad for you naturally depends on many factors such as age, weight et cetera, there do exist recommendations.
-                        For example, products containing more than 22.5 grams of sugar per 100g should be considered in moderation. Let's see how many products go beyond this limit.</h4>
+                        For example, products containing more than 22.5 grams of sugar per 100g should be consumed in moderation. Let's see how many products go beyond this limit.</h4>
 
                 </div>
 
@@ -546,7 +545,12 @@
                         <p>
                         Once more ensuring valid ranges for the data and removing outliers we look at the distribution of sugar for all products we find that <b> 25 % </b> of all products go beyond the previously stated limit, and is thus considered too sugary.
                         </p><p>
-                        We can safely assume that the majority of sugars come from sweets and the like, but we can do a bit better than just assuming. Keeping in mind that we lose 74% of all data when using categories, let's see how sugar content is distributed in the individual categories.
+                        We can safely assume that the majority of sugars come from sweets and the like, but we can do a bit better than just assuming. Keeping in mind that we lose 74% of all data when using categories (as seen in data exploration), let's see how sugar content is distributed in the individual categories.
+
+                        </p><p>
+                        Due to the messy nature of the category labels, written in different languages with different formatting and risk of overlap, we decided to only look at the tventy-five most well populated categories in the hope that they would be the least biased. 
+
+
                         </p>
 
                     </div>
@@ -563,10 +567,10 @@
                         </div>
                         <p align="left">
                         <br></br>
-                        <p>
-                        Due to the messy nature of the category labels, written in different languages with different formatting and risk of overlap, we decided to only look at the tventy-five most well populated categories. So the figure above represents the twenty-five most popular food category labels and the amount of products in them that are considered high-sugar.
-
+                        So the figure above represents the twenty-five most popular food category labels and the amount of products in them that are considered high-sugar.
+                        Some overlap seems to still have occured with both <b> biscuits</b> and <b>biscuits and cakes</b> appearing, as well as some mix between english and french category labels. Nevertheless we can clearly see that sweets really live up to their reputation of being sweets, with around 80 percent of all cakes being considered high-sugar, to be consumed only in limited amounts. 
                         </p><p>
+                        What a travesty.
                         </p>
 
                     </div>
@@ -577,7 +581,9 @@
                     <h3>CONCLUSIONS</h3>
                     <p align="left">
                     If one disregard the fact that the following analysis was done on only around twenty percent of the data, that categories risk being overlapping, differently formatted (or just plain wrong), it seems that things are as one would expect. Delicous things like cake, biscuits and sweets tend to be too sweet by a lot, lending weight to the old adage "too much of a good thing... is a bad thing". Somewhat surprisingly breakfast products seem to be too sweet, but that might be
-                    attributed to culture more than anything else. Most of the data comes from France, so pain au chocolat, jam and sweet cereal might dominate here. Had the data been more completely filled in it would have been interesting to tie sugar-content and breakfast habits togethere on a country-basis.
+                    attributed to culture more than anything else. Most of the data comes from France, so pain au chocolat, jam and sweet cereal might dominate here. Had more data been provided from more countries in the world we would have obtained a more nuanced picture of whether or not breakfast really does tend to be sweet.
+                    </p><p>
+                    So in summation, sweets should only be consumed in limited amounts and the french seem to like their breakfast sweet.
                     </p><p>
                     For those interested, the exact distributions for the different categories are plotted below
                     </p>
